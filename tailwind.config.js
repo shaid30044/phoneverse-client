@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         primary: "#ee4037",
+        past: "#F0F0F4",
       },
     },
   },
