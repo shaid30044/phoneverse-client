@@ -50,9 +50,7 @@ const Navbar = () => {
               <NavLink
                 to={path}
                 className={({ isActive }) =>
-                  isActive
-                    ? "border-b-2 border-primary pb-0.5"
-                    : "nav-button duration-300"
+                  isActive ? "border-b-2 border-primary pb-0.5" : ""
                 }
               >
                 {page}
@@ -89,9 +87,7 @@ const Navbar = () => {
                     <NavLink
                       to={path}
                       className={({ isActive }) =>
-                        isActive
-                          ? "border-b-2 border-primary pb-0.5"
-                          : "nav-button duration-300"
+                        isActive ? "border-b-2 border-primary pb-0.5" : ""
                       }
                     >
                       {page}
