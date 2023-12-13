@@ -35,9 +35,11 @@ const Navbar = () => {
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 items-center px-4 md:px-10 lg:px-20 py-4">
-      <Link to="/">
-        <img src={logo} alt="logo" className="w-14" />
-      </Link>
+      <div className="w-14">
+        <Link to="/">
+          <img src={logo} alt="logo" className="w-14" />
+        </Link>
+      </div>
 
       {/* large device nav links */}
 
