@@ -1,13 +1,13 @@
-import img1 from "../../assets/1.png";
-import img2 from "../../assets/2.png";
-import img3 from "../../assets/3.png";
-import img4 from "../../assets/4.png";
-import img5 from "../../assets/5.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, EffectFade, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import img1 from "../../assets/1.png";
+import img2 from "../../assets/2.png";
+import img3 from "../../assets/3.png";
+import img4 from "../../assets/4.png";
+import img5 from "../../assets/5.png";
 
 const Slider = () => {
   const images = [img1, img2, img3, img4, img5];
@@ -34,7 +34,7 @@ const Slider = () => {
         className="mySwiper"
       >
         {images.map((img, idx) => (
-          <SwiperSlide key={idx} className="pb-10">
+          <SwiperSlide key={idx} className="pb-8 md:pb-10">
             <img src={img} alt="idx" className="w-full" />
           </SwiperSlide>
         ))}

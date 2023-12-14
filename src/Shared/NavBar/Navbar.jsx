@@ -22,6 +22,10 @@ const Navbar = () => {
       path: "/cart",
     },
     {
+      page: "Blog",
+      path: "/blog",
+    },
+    {
       page: "Dashboard",
       path: "/dashboard",
     },
@@ -61,8 +65,8 @@ const Navbar = () => {
       </div>
 
       <div className="flex justify-end items-center">
-        <Link to="/signUp">
-          <Button type={"Sign Up"} />
+        <Link to="/signIn">
+          <Button type={"Sign In"} />
         </Link>
 
         {/* small and medium device nav links */}

@@ -26,6 +26,10 @@ const Footer = () => {
       path: "/cart",
     },
     {
+      page: "Blog",
+      path: "/blog",
+    },
+    {
       page: "Dashboard",
       path: "/dashboard",
     },
@@ -57,12 +61,12 @@ const Footer = () => {
   };
 
   return (
-    <div className="lg:px-20 pt-10">
+    <div className="pt-10">
       <div>
         <Toaster />
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-10 sm:gap-y-16 lg:gap-0 px-4 md:px-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-10 sm:gap-y-16 lg:gap-0 px-4 md:px-10 lg:px-20">
         <div className="flex flex-col items-center sm:items-start">
           <div className="w-28">
             <Link to="/">
