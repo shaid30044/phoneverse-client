@@ -136,7 +136,11 @@ const Footer = () => {
             Stay up to date on the latest from Phone Verse
           </p>
 
-          <form ref={formRef} onSubmit={handleContact} className="w-full">
+          <form
+            ref={formRef}
+            onSubmit={handleContact}
+            className="flex flex-col w-full"
+          >
             <input
               type="email"
               name="email"

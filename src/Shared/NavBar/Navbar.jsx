@@ -61,7 +61,9 @@ const Navbar = () => {
       </div>
 
       <div className="flex justify-end items-center">
-        <Button type={"Sign Up"} />
+        <Link to="/signUp">
+          <Button type={"Sign Up"} />
+        </Link>
 
         {/* small and medium device nav links */}
 
