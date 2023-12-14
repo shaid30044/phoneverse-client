@@ -5,11 +5,11 @@ import phone from "../assets/sign.jpg";
 import Button from "../Shared/Button/Button";
 import { FcGoogle } from "react-icons/fc";
 
-const SignUp = () => {
+const SignIn = () => {
   return (
     <div>
       <Helmet>
-        <title>Phone Verse | Sign Up</title>
+        <title>Phone Verse | Sign In</title>
       </Helmet>
 
       <div className="bg-past h-screen p-4">
@@ -17,11 +17,11 @@ const SignUp = () => {
           <div className="relative p-6 lg:px-20 md:py-10">
             <div className="w-20">
               <Link to="/">
-                <img src={logo} alt="logo" className="w-20 pb-4" />
+                <img src={logo} alt="logo" className="w-20" />
               </Link>
             </div>
 
-            <div className="flex flex-col justify-center h-[75vh] md:h-[70vh] pb-4">
+            <div className="flex flex-col justify-center h-[70vh]">
               <ul className="flex gap-4 text-xl font-semibold pb-4">
                 <li>
                   <NavLink
@@ -58,23 +58,6 @@ const SignUp = () => {
               <div className="divider my-6">Or</div>
 
               <form className="flex flex-col gap-y-2 w-full">
-                <div className="grid grid-cols-2 gap-x-2">
-                  <input
-                    type="text"
-                    name="firstName"
-                    placeholder="First Name"
-                    required
-                    className="bg-past/70 outline-none w-full px-4 py-2"
-                  />
-                  <input
-                    type="text"
-                    name="lastName"
-                    placeholder="Last Name"
-                    required
-                    className="bg-past/70 outline-none w-full px-4 py-2"
-                  />
-                </div>
-
                 <input
                   type="email"
                   name="email"
@@ -90,16 +73,11 @@ const SignUp = () => {
                   className="bg-past/70 outline-none w-full px-4 py-2 mb-2"
                 />
 
-                <Button type={"Sign Up"} />
+                <Button type={"Sign In"} />
               </form>
-
-              <div className="grid md:grid-cols-2 gap-4 pt-4">
-                <Button type={"Demo User"} />
-                <Button type={"Demo Admin"} />
-              </div>
             </div>
 
-            <div className="absolute bottom-6 md:bottom-10 text-sm pt-4">
+            <div className="absolute bottom-6 md:bottom-10 text-sm">
               Copyright © 2023 - All right reserved
             </div>
           </div>
@@ -117,4 +95,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;

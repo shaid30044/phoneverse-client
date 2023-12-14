@@ -146,7 +146,7 @@ const Footer = () => {
               name="email"
               placeholder="Email"
               required
-              className="bg-past outline-none w-full px-4 py-2 mt-4 mb-3"
+              className="bg-past/70 outline-none w-full px-4 py-2 mt-4 mb-3"
             />
 
             <Button type={"Submit"} />
