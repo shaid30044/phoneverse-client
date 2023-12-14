@@ -149,7 +149,7 @@ const Footer = () => {
               className="bg-past/70 outline-none w-full px-4 py-2 mt-4 mb-3"
             />
 
-            <Button type={"Submit"} />
+            <Button type={"Subscribe"} />
           </form>
         </div>
       </div>
