@@ -57,7 +57,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="lg:px-20 pt-20">
+    <div className="lg:px-20 pt-10">
       <div>
         <Toaster />
       </div>
