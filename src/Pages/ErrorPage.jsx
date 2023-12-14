@@ -48,7 +48,7 @@ const ErrorPage = () => {
           <img
             src={phone}
             alt="phone"
-            className="transition-transform duration-1000 ease-in-out transform hover:-translate-y-20 xl:hover:-translate-y-60 rounded-r-xl"
+            className="transition-transform duration-[2000ms] ease-in-out transform hover:-translate-y-20 xl:hover:-translate-y-60 rounded-r-xl"
           />
         </div>
       </div>
