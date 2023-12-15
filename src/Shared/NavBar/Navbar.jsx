@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 items-center px-4 md:px-10 lg:px-20 py-4">
+    <div className="bg-white grid grid-cols-2 sm:grid-cols-4 items-center px-4 md:px-10 lg:px-20 py-4">
       <div className="w-14">
         <Link to="/">
           <img src={logo} alt="logo" className="w-14" />
@@ -47,7 +47,7 @@ const Navbar = () => {
 
       {/* large device nav links */}
 
-      <div className="hidden sm:flex justify-center">
+      <div className="hidden col-span-2 sm:flex justify-center">
         <ul className="flex gap-10 text-lg">
           {pages.map(({ page, path }) => (
             <li key={page}>
@@ -84,10 +84,10 @@ const Navbar = () => {
             onClose={toggleDrawer}
             direction="top"
             duration={400}
-            size={350}
+            size={410}
           >
-            <div className="bg-past p-4">
-              <ul className="flex flex-col justify-center items-center gap-10 text-lg bg-white rounded-lg py-10">
+            <div className="bg-past p-3">
+              <ul className="flex flex-col justify-center items-center gap-10 text-lg bg-white py-10">
                 {pages.map(({ page, path }) => (
                   <li key={page}>
                     <NavLink

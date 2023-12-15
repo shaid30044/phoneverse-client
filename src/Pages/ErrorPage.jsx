@@ -12,7 +12,7 @@ const ErrorPage = () => {
 
   return (
     <div className="bg-past h-screen p-4">
-      <div className="grid lg:grid-cols-2 bg-white rounded-xl h-full">
+      <div className="grid lg:grid-cols-2 bg-white h-full">
         <div className="relative p-6 md:px-20 md:py-10">
           <div className="w-20">
             <Link to="/">
@@ -44,11 +44,11 @@ const ErrorPage = () => {
           </div>
         </div>
 
-        <div className="relative hidden lg:block overflow-hidden bg-cover bg-no-repeat rounded-r-xl hover:rounded-r-xl">
+        <div className="relative hidden lg:block overflow-hidden bg-cover bg-no-repeat">
           <img
             src={phone}
             alt="phone"
-            className="transition-transform duration-[2000ms] ease-in-out transform hover:-translate-y-20 xl:hover:-translate-y-60 rounded-r-xl"
+            className="transition-transform duration-[2000ms] ease-in-out transform hover:-translate-y-20 xl:hover:-translate-y-60"
           />
         </div>
       </div>

@@ -1,0 +1,896 @@
+[
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy S23 Ultra",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-02-17",
+    "display": {
+      "main": {
+        "size": "6.8 inches",
+        "resolution": "3088 x 1440 pixels (Quad HD+)",
+        "technology": "Dynamic AMOLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1750 nits"
+      }
+    },
+    "processor": "Qualcomm Snapdragon 8 Gen 2",
+    "ram": {
+      "capacity": [8, 12],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [256, 512, 1],
+      "type": "UFS 4.0"
+    },
+    "camera": {
+      "rear": {
+        "main": "200MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto1": "10MP (3x zoom)",
+        "telephoto2": "10MP (10x zoom)"
+      },
+      "front": {
+        "main": "12MP (wide)"
+      }
+    },
+    "battery": {
+      "capacity": 5000,
+      "fast_charging": "45W",
+      "wireless_charging": "15W"
+    },
+    "operating_system": "Android 13",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Ultrasonic in-display",
+      "stylus": "Yes",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 1199.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy S23+",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-10-20",
+    "display": {
+      "main": {
+        "size": "6.6 inches",
+        "resolution": "2340 x 1080 pixels (FHD+)",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "Qualcomm Snapdragon 8 Gen 2",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256],
+      "type": "UFS 4.0"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "10MP (3x zoom)"
+      },
+      "front": {
+        "main": "12MP (wide)"
+      }
+    },
+    "battery": {
+      "capacity": 4800,
+      "fast_charging": "45W",
+      "wireless_charging": "15W"
+    },
+    "operating_system": "Android 13",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Ultrasonic in-display",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 999.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy S23",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-10-20",
+    "display": {
+      "main": {
+        "size": "6.1 inches",
+        "resolution": "2340 x 1080 pixels (FHD+)",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "Qualcomm Snapdragon 8 Gen 2",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256],
+      "type": "UFS 4.0"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "10MP (3x zoom)"
+      },
+      "front": {
+        "main": "12MP (wide)"
+      }
+    },
+    "battery": {
+      "capacity": 4000,
+      "fast_charging": "25W",
+      "wireless_charging": "15W"
+    },
+    "operating_system": "Android 13",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Ultrasonic in-display",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 799.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy S22 Ultra",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2022-02-25",
+    "display": {
+      "main": {
+        "size": "6.8 inches",
+        "resolution": "3088 x 1440 pixels (Quad HD+)",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1750 nits"
+      }
+    },
+    "processor": "Snapdragon 8 Gen 1 (Exynos 2200 in some regions)",
+    "ram": {
+      "capacity": [8, 12],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "108MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto1": "10MP (3x zoom)",
+        "telephoto2": "10MP (10x zoom)"
+      },
+      "front": {
+        "main": "10MP (wide)"
+      }
+    },
+    "battery": {
+      "capacity": 5000,
+      "fast_charging": "45W",
+      "wireless_charging": "15W"
+    },
+    "operating_system": "Android 12 (upgradable to Android 13)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Ultrasonic in-display",
+      "stylus": "Yes",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.2, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 1199.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy S22+",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2022-02-25",
+    "display": {
+      "main": {
+        "size": "6.6 inches",
+        "resolution": "2340 x 1080 pixels (FHD+)",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1300 nits"
+      }
+    },
+    "processor": "Snapdragon 8 Gen 1 (Exynos 2200 in some regions)",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "10MP (3x zoom)"
+      },
+      "front": {
+        "main": "10MP (wide)"
+      }
+    },
+    "battery": {
+      "capacity": 4500,
+      "fast_charging": "45W",
+      "wireless_charging": "15W"
+    },
+    "operating_system": "Android 12 (upgradable to Android 13)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Ultrasonic in-display",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.2, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 999.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy S22",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2022-02-25",
+    "display": {
+      "main": {
+        "size": "6.1 inches",
+        "resolution": "2340 x 1080 pixels (FHD+)",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1300 nits"
+      }
+    },
+    "processor": "Snapdragon 8 Gen 1 (Exynos 2200 in some regions)",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "10MP (3x zoom)"
+      },
+      "front": {
+        "main": "10MP (wide)"
+      }
+    },
+    "battery": {
+      "capacity": 3700,
+      "fast_charging": "25W",
+      "wireless_charging": "15W"
+    },
+    "operating_system": "Android 12 (upgradable to Android 13)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Ultrasonic in-display",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.2, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 799.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy Z Fold 5",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-07-26",
+    "display": {
+      "main": {
+        "size": "7.6 inches",
+        "resolution": "2176 x 1812 pixels",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1750 nits"
+      },
+      "cover": {
+        "size": "6.2 inches",
+        "resolution": "2316 x 904 pixels",
+        "technology": "Dynamic AMOLED",
+        "refresh_rate": 120
+      }
+    },
+    "processor": "Qualcomm Snapdragon 8 Gen 2",
+    "ram": {
+      "capacity": [12],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [256, 512],
+      "type": "UFS 4.0"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "12MP"
+      },
+      "front": {
+        "main": "10MP",
+        "under-display": "4MP"
+      }
+    },
+    "battery": {
+      "capacity": 4400,
+      "fast_charging": "45W"
+    },
+    "operating_system": "Android 13",
+    "additional_features": {
+      "water_resistance": "IPX8",
+      "security": "Ultrasonic in-display",
+      "stylus": "Yes",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 1999.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy Z Fold 4",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-08-10",
+    "display": {
+      "main": {
+        "size": "7.6 inches",
+        "resolution": "2176 x 1812 pixels",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1200 nits"
+      },
+      "cover": {
+        "size": "6.2 inches",
+        "resolution": "2316 x 904 pixels",
+        "technology": "Dynamic AMOLED",
+        "refresh_rate": 120
+      }
+    },
+    "processor": "Snapdragon 8 Gen 1",
+    "ram": {
+      "capacity": [128],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [256, 512, 1],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto1": "10MP (3x zoom)",
+        "telephoto2": "10MP (10x zoom)"
+      },
+      "front": {
+        "main": "10MP",
+        "under-display": "4MP"
+      }
+    },
+    "battery": {
+      "capacity": 4400,
+      "fast_charging": "45W"
+    },
+    "operating_system": "Android 12L",
+    "additional_features": {
+      "water_resistance": "IPX8",
+      "security": "Ultrasonic in-display",
+      "stylus": "Yes",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.2, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 1763.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy Z Flip 5",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-07-26",
+    "display": {
+      "main": {
+        "size": "6.7 inches",
+        "resolution": "2640 x 1080 pixels",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1600 nits"
+      },
+      "cover": {
+        "size": "3.4 inches",
+        "resolution": "748 x 720 pixels",
+        "technology": "Dynamic AMOLED",
+        "refresh_rate": 120
+      }
+    },
+    "processor": "Qualcomm Snapdragon 8 Gen 2",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [256, 512],
+      "type": "UFS 4.0"
+    },
+    "camera": {
+      "rear": {
+        "main": "12MP",
+        "ultrawide": "12MP",
+        "telephoto": "10MP"
+      },
+      "front": "10MP (under-display)"
+    },
+    "battery": {
+      "capacity": 3700,
+      "fast_charging": "45W"
+    },
+    "operating_system": "Android 13",
+    "additional_features": {
+      "water_resistance": "IPX8",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 999.99
+  },
+
+  {
+    "brand": "Samsung",
+    "name": "Samsung Galaxy Z Flip 4",
+    "image": "https://i.ibb.co/V9SZLM3/s23u.png",
+    "release_date": "2023-08-10",
+    "display": {
+      "main": {
+        "size": "6.7 inches",
+        "resolution": "2640 x 1080 pixels",
+        "technology": "Dynamic AMOLED 2X",
+        "refresh_rate": 120,
+        "peak_brightness": "1200 nits"
+      },
+      "cover": {
+        "size": "3.3 inches",
+        "resolution": "720 x 386 pixels",
+        "technology": "AMOLED",
+        "refresh_rate": 60
+      }
+    },
+    "processor": "Snapdragon 8 Gen 1",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "12MP",
+        "ultrawide": "12MP"
+      },
+      "front": "10MP (under-display)"
+    },
+    "battery": {
+      "capacity": 3700,
+      "fast_charging": "25W"
+    },
+    "operating_system": "Android 12L",
+    "additional_features": {
+      "water_resistance": "IPX8",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.2, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 899.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 15 Pro Max",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2023-09-22",
+    "display": {
+      "main": {
+        "size": "6.7 inches",
+        "resolution": "2796 x 1290 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "A17 Bionic chip",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "NVMe"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto1": "16MP (3x zoom)",
+        "telephoto2": "20MP (10x zoom)"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 5000,
+      "fast_charging": "30W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 17",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Titanium",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 1099.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 15 Pro",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2023-09-22",
+    "display": {
+      "main": {
+        "size": "6.1 inches",
+        "resolution": "2556 x 1179 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "A17 Bionic chip",
+    "ram": {
+      "capacity": [8],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "NVMe"
+    },
+    "camera": {
+      "rear": {
+        "main": "50MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "16MP (3x zoom)"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 4800,
+      "fast_charging": "30W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 17",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Titanium",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 999.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 15 Plus",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2023-09-22",
+    "display": {
+      "main": {
+        "size": "6.7 inches",
+        "resolution": "2778 x 1242 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "A17 Bionic chip",
+    "ram": {
+      "capacity": [6],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "NVMe"
+    },
+    "camera": {
+      "rear": {
+        "main": "48MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "12MP (3x zoom)"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 4100,
+      "fast_charging": "30W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 17",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 899.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 15",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2023-09-22",
+    "display": {
+      "main": {
+        "size": "6.1 inches",
+        "resolution": "2532 x 1170 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1200 nits"
+      }
+    },
+    "processor": "A16 Bionic chip",
+    "ram": {
+      "capacity": [6],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256],
+      "type": "NVMe"
+    },
+    "camera": {
+      "rear": {
+        "main": "48MP (wide)",
+        "ultrawide": "12MP"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 3349,
+      "fast_charging": "20W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 17",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 799.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 14 Pro Max",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2022-09-16",
+    "display": {
+      "main": {
+        "size": "6.7 inches",
+        "resolution": "2796 x 1290 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "A16 Bionic chip",
+    "ram": {
+      "capacity": [6],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "NVMe"
+    },
+    "camera": {
+      "rear": {
+        "main": "48MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto1": "12MP (3x zoom)",
+        "telephoto2": "12MP (10x zoom)",
+        "sensor_shift_stabilization": true
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 4323,
+      "fast_charging": "27W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 16 (upgradable to iOS 17)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Surgical-grade stainless steel",
+      "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 1099.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 14 Pro",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2022-09-16",
+    "display": {
+      "main": {
+        "size": "6.1 inches",
+        "resolution": "2532 x 1170 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1500 nits"
+      }
+    },
+    "processor": "A16 Bionic chip",
+    "ram": {
+      "capacity": [6],
+      "type": "LPDDR5"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "NVMe"
+    },
+    "camera": {
+      "rear": {
+        "main": "48MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "12MP (3x zoom)"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 3693,
+      "fast_charging": "27W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 16 (upgradable to iOS 17)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Surgical-grade stainless steel",
+      "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 999.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 14 Plus",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2022-09-16",
+    "display": {
+      "main": {
+        "size": "6.7 inches",
+        "resolution": "2778 x 1242 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 120,
+        "peak_brightness": "1200 nits"
+      }
+    },
+    "processor": "A16 Bionic chip",
+    "ram": {
+      "capacity": [6],
+      "type": "LPDDR4X"
+    },
+    "storage": {
+      "capacity": [128, 256, 512, 1],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "48MP (wide)",
+        "ultrawide": "12MP",
+        "telephoto": "12MP (2x zoom)"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": "4026mAh",
+      "fast_charging": "20W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 16 (upgradable to iOS 17)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 899.99
+  },
+
+  {
+    "brand": "Apple",
+    "name": "iPhone 14",
+    "image": "https://i.ibb.co/zX8FvgF/i15pm.png",
+    "release_date": "2022-09-16",
+    "display": {
+      "main": {
+        "size": "6.1 inches",
+        "resolution": "2532 x 1170 pixels",
+        "technology": "Super Retina XDR OLED",
+        "refresh_rate": 60,
+        "peak_brightness": "1200 nits"
+      }
+    },
+    "processor": "A15 Bionic chip",
+    "ram": {
+      "capacity": [6],
+      "type": "LPDDR4X"
+    },
+    "storage": {
+      "capacity": [128, 256],
+      "type": "UFS 3.1"
+    },
+    "camera": {
+      "rear": {
+        "main": "12MP (wide)",
+        "ultrawide": "12MP"
+      },
+      "front": {
+        "main": "12MP (TrueDepth)"
+      }
+    },
+    "battery": {
+      "capacity": 3227,
+      "fast_charging": "20W",
+      "wireless_charging": "15W",
+      "magsafe_charging": true
+    },
+    "operating_system": "iOS 16 (upgradable to iOS 17)",
+    "additional_features": {
+      "water_resistance": "IP68",
+      "security": "Face ID",
+      "material": "Aluminum",
+      "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, Ultra Wideband chip (U1) for AirDrop and Find My, NFC, GPS, GLONASS, Galileo, BeiDou"
+    },
+    "price": 799.99
+  }
+]
