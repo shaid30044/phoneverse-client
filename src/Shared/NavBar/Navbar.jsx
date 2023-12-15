@@ -74,7 +74,7 @@ const Navbar = () => {
         <div className="sm:hidden">
           <button
             onClick={toggleDrawer}
-            className="btn bg-transparent hover:bg-transparent text-2xl shadow-none border-none drawer-button"
+            className="btn btn-sm bg-transparent hover:bg-transparent text-2xl shadow-none border-none drawer-button pr-0"
           >
             <CgMenuRight />
           </button>
@@ -84,10 +84,10 @@ const Navbar = () => {
             onClose={toggleDrawer}
             direction="top"
             duration={400}
-            size={410}
+            size={350}
           >
-            <div className="bg-past p-3">
-              <ul className="flex flex-col justify-center items-center gap-10 text-lg bg-white py-10">
+            <div className="bg-past p-4">
+              <ul className="flex flex-col justify-center items-center gap-6 text-lg bg-white py-10">
                 {pages.map(({ page, path }) => (
                   <li key={page}>
                     <NavLink
