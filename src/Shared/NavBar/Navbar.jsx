@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white grid grid-cols-2 sm:grid-cols-4 items-center px-4 md:px-10 lg:px-20 py-4">
+    <div className="bg-white grid grid-cols-2 sm:grid-cols-4 items-center px-4 md:px-10 lg:px-20 py-2 md:py-4">
       <div className="w-14">
         <Link to="/">
           <img src={logo} alt="logo" className="w-14" />
