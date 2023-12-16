@@ -49,13 +49,13 @@ const AllPhones = ({ phone }) => {
 
             <div className="flex items-center gap-8">
               <div className="relative bg-cover bg-no-repeat">
-                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-150 px-0">
+                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
                   <FaRegHeart />
                 </button>
               </div>
 
               <div className="relative bg-cover bg-no-repeat">
-                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-150 px-0">
+                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
                   <RiShoppingCart2Line />
                 </button>
               </div>
