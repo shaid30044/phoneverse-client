@@ -16,6 +16,19 @@ const Filter = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOption, setSortOption] = useState(options[0]);
 
+  const brands = [
+    "Samsung",
+    "Apple",
+    "Huawei",
+    "Google",
+    "ASUS",
+    "Oneplus",
+    "Xiaomi",
+    "Vivo",
+    "Oppo",
+    "ZTE",
+  ];
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -50,6 +63,17 @@ const Filter = () => {
 
   return (
     <div>
+      <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-20 text-lg font-medium bg-white p-4 mb-4">
+        {brands.map((brand, idx) => (
+          <div
+            key={idx}
+            className="text-black hover:text-primary duration-300 cursor-pointer"
+          >
+            {brand}
+          </div>
+        ))}
+      </div>
+
       <div className="grid md:grid-cols-3 xl:grid-cols-4 gap-4">
         <div className="bg-white p-4">
           <div className="flex items-center gap-2 text-2xl pb-4">
@@ -74,7 +98,7 @@ const Filter = () => {
                 name="search"
                 id="search"
                 placeholder="Search Phone"
-                className="border outline-none rounded-md w-full px-5 py-2"
+                className="border-2 outline-none rounded-md w-full px-5 py-2"
                 value={searchQuery}
                 onChange={handleSearchChange}
               />

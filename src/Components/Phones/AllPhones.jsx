@@ -15,20 +15,50 @@ const AllPhones = ({ phone }) => {
       <div className="pt-2">
         <h3 className="text-lg font-medium">{phone.name}</h3>
 
-        <div className="flex justify-between items-center pr-1 pt-1 pb-2">
-          <p className="text-black">${phone.price}</p>
+        <div className="pt-2">
+          <p>
+            <span className="font-medium">Refresh Rate: </span>
+            {phone.display.main.refresh_rate}Hz
+          </p>
 
-          <div className="flex items-center gap-8">
-            <div className="relative bg-cover bg-no-repeat">
-              <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-150 px-0">
-                <FaRegHeart />
-              </button>
-            </div>
+          <div className="flex gap-2">
+            <span className="font-medium">RAM: </span>
+            {phone.ram.capacity.map((capacity, idx) => (
+              <div key={idx}>{capacity}GB</div>
+            ))}
+          </div>
 
-            <div className="relative bg-cover bg-no-repeat">
-              <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-150 px-0">
-                <RiShoppingCart2Line />
-              </button>
+          <div className="flex gap-2">
+            <span className="font-medium">Storage: </span>
+            {phone.storage.capacity.map((capacity, idx) => (
+              <div key={idx}>
+                {capacity === 1 ? <span>1TB</span> : <span>{capacity}GB</span>}
+              </div>
+            ))}
+          </div>
+
+          <p className="text-black">
+            <span className="font-medium">Battery: </span>
+            {phone.battery.capacity}mAH
+          </p>
+
+          <div className="flex justify-between items-center pr-1 pb-2">
+            <p className="text-black">
+              <span className="font-medium">Price: </span>${phone.price}
+            </p>
+
+            <div className="flex items-center gap-8">
+              <div className="relative bg-cover bg-no-repeat">
+                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-150 px-0">
+                  <FaRegHeart />
+                </button>
+              </div>
+
+              <div className="relative bg-cover bg-no-repeat">
+                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-150 px-0">
+                  <RiShoppingCart2Line />
+                </button>
+              </div>
             </div>
           </div>
         </div>
