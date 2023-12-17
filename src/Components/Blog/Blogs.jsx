@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { MdOutlineBookmarks, MdBookmarks } from "react-icons/md";
 import Select from "react-select";
+import NotFound from "../../Shared/NotFound";
+import { Link } from "react-router-dom";
 
 const options = [
   { value: "default", label: "Default" },
   { value: "recent", label: "Recent" },
   { value: "old", label: "Old" },
-  { value: "mostViews", label: "Most Views" },
-  { value: "lessViews", label: "Less Views" },
+  { value: "mostPopular", label: "Most Popular" },
+  { value: "leastPopular", label: "Least Popular" },
 ];
 
 const Blogs = () => {
@@ -55,11 +57,11 @@ const Blogs = () => {
         );
         break;
 
-      case "mostViews":
+      case "mostPopular":
         filteredBlogs = filteredBlogs.sort((a, b) => b.views - a.views);
         break;
 
-      case "lessViews":
+      case "leastPopular":
         filteredBlogs = filteredBlogs.sort((a, b) => a.views - b.views);
         break;
 
@@ -89,7 +91,7 @@ const Blogs = () => {
               type="search"
               name="search"
               id="search"
-              placeholder="Search Phone"
+              placeholder="Search here..."
               value={search}
               onChange={handleSearchChange}
               className="border-2 outline-none rounded-md w-full px-5 py-2"
@@ -108,40 +110,51 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-6 bg-white p-2 sm:p-6">
-        {filteredAndSortedBlogs.map((blog, idx) => (
-          <div key={idx}>
-            <img src={blog.image} alt="image" />
-
-            <div className="flex justify-between items-center pr-1 pt-1">
-              <p className="text-black/70">{blog.date}</p>
-
-              <div className="flex items-center gap-5">
-                <p className="flex items-center gap-1 text-black/70">
-                  <span>
-                    <FaRegEye />
-                  </span>
-                  {blog.views}k
-                </p>
-
-                <button className="btn btn-sm text-base hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
-                  <MdOutlineBookmarks />
-                </button>
+      {filteredAndSortedBlogs.length === 0 ? (
+        <div className="flex justify-center items-center pt-10">
+          <NotFound />
+        </div>
+      ) : (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-6 bg-white p-2 sm:p-6">
+          {filteredAndSortedBlogs.map((blog, idx) => (
+            <div key={idx}>
+              <div className="relative overflow-hidden flex justify-center items-center bg-past bg-cover bg-no-repeat">
+                <img
+                  src={blog.image}
+                  className="transition duration-500 ease-in-out hover:scale-110"
+                />
               </div>
-            </div>
 
-            <h3 className="text-xl font-medium py-1">{blog.title}</h3>
-            <p>
-              {blog.content.introduction.slice(0, 150)}...{" "}
-              <span>
-                <button className="btn btn-sm normal-case text-base font-medium text-primary hover:text-white bg-transparent hover:bg-primary border-none shadow-none rounded-none duration-300 px-2">
-                  Read more
-                </button>
-              </span>
-            </p>
-          </div>
-        ))}
-      </div>
+              <div className="flex justify-between items-center pr-1 pt-1">
+                <p className="text-black/70">{blog.date}</p>
+
+                <div className="flex items-center gap-5">
+                  <p className="flex items-center gap-1 text-black/70">
+                    <span>
+                      <FaRegEye />
+                    </span>
+                    {blog.views}k
+                  </p>
+
+                  <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
+                    <MdOutlineBookmarks />
+                  </button>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-medium py-1">{blog.title}</h3>
+              <p>
+                {blog.content.introduction.slice(0, 150)}...
+                <Link to={`/blog/${blog._id}`}>
+                  <button className="btn btn-sm normal-case text-base font-medium text-primary hover:text-white bg-transparent hover:bg-primary border-none shadow-none rounded-none duration-300 px-2">
+                    Read more
+                  </button>
+                </Link>
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

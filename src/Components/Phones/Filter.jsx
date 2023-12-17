@@ -107,7 +107,7 @@ const Filter = () => {
 
           <div>
             {sortedPhones.length === 0 ? (
-              <p className="flex justify-center bg-white py-10">
+              <p className="flex justify-center py-10">
                 <NotFound />
               </p>
             ) : (

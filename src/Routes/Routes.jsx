@@ -6,6 +6,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
 import Blog from "../Pages/Blog";
+import ReadMore from "../Pages/ReadMore";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/:id",
+        element: <ReadMore />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5173/blog/${params.id}`),
       },
       {
         path: "/signIn",
