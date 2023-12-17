@@ -1,13 +1,12 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaRegEye } from "react-icons/fa";
 import { MdOutlineBookmarks, MdBookmarks } from "react-icons/md";
 import Select from "react-select";
 import NotFound from "../../Shared/NotFound";
 import { Link } from "react-router-dom";
+import useBlogs from "../../Hooks/useBlogs";
 
 const options = [
-  { value: "default", label: "Default" },
   { value: "recent", label: "Recent" },
   { value: "old", label: "Old" },
   { value: "mostPopular", label: "Most Popular" },
@@ -15,21 +14,9 @@ const options = [
 ];
 
 const Blogs = () => {
-  const [blog, setBlog] = useState([]);
+  const [blogs] = useBlogs();
   const [search, setSearch] = useState("");
   const [sortOption, setSortOption] = useState(options[0]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("./blog.json");
-        setBlog(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -40,7 +27,7 @@ const Blogs = () => {
   };
 
   const filterAndSortBlogs = () => {
-    let filteredBlogs = blog.filter((b) =>
+    let filteredBlogs = blogs.filter((b) =>
       b.title.toLowerCase().includes(search.toLowerCase())
     );
 
@@ -63,9 +50,6 @@ const Blogs = () => {
 
       case "leastPopular":
         filteredBlogs = filteredBlogs.sort((a, b) => a.views - b.views);
-        break;
-
-      default:
         break;
     }
 
@@ -115,7 +99,7 @@ const Blogs = () => {
           <NotFound />
         </div>
       ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-6 bg-white p-2 sm:p-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 md:gap-6 bg-white p-2 sm:p-6">
           {filteredAndSortedBlogs.map((blog, idx) => (
             <div key={idx}>
               <div className="relative overflow-hidden flex justify-center items-center bg-past bg-cover bg-no-repeat">

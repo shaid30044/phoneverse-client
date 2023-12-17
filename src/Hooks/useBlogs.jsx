@@ -11,6 +11,7 @@ const useBlogs = () => {
       return res.data;
     },
   });
+
   return [blogs, blogsRefetch];
 };
 

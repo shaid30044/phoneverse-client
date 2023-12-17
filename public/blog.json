@@ -2,6 +2,7 @@
   {
     "title": "The Evolution of Smartphone Technology",
     "date": "February 15, 2023",
+    "category": "Technology",
     "tags": ["Smartphones", "Technology", "Innovation"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 1,
@@ -15,6 +16,7 @@
   {
     "title": "Choosing the Perfect Smartphone for Your Lifestyle",
     "date": "March 10, 2023",
+    "category": "Buying Guide",
     "tags": ["Smartphones", "Buying Guide", "Lifestyle"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 3.2,
@@ -28,6 +30,7 @@
   {
     "title": "The Rise of 5G Technology",
     "date": "April 5, 2023",
+    "category": "Technology",
     "tags": ["5G", "Technology", "Connectivity"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.5,
@@ -41,6 +44,7 @@
   {
     "title": "Exploring the World of Smartphone Photography",
     "date": "May 20, 2023",
+    "category": "Photography",
     "tags": ["Photography", "Smartphones", "Camera"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 1.8,
@@ -54,6 +58,7 @@
   {
     "title": "Navigating the Features of Foldable Smartphones",
     "date": "June 15, 2023",
+    "category": "Technology",
     "tags": ["Foldable Phones", "Technology", "Innovation"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.9,
@@ -67,6 +72,7 @@
   {
     "title": "Tips for Extending Your Smartphone Battery Life",
     "date": "July 10, 2023",
+    "category": "Tips",
     "tags": ["Smartphones", "Battery Life", "Tips"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.2,
@@ -80,6 +86,7 @@
   {
     "title": "The Impact of Augmented Reality in Smartphones",
     "date": "August 25, 2023",
+    "category": "Technology",
     "tags": ["Augmented Reality", "Smartphones", "Technology"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 3.8,
@@ -93,6 +100,7 @@
   {
     "title": "Securing Your Smartphone: A Guide to Mobile Security",
     "date": "September 18, 2023",
+    "category": "Security",
     "tags": ["Smartphones", "Security", "Privacy"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.1,
@@ -106,6 +114,7 @@
   {
     "title": "The Future of Smartphone Displays: Exploring OLED Technology",
     "date": "October 12, 2023",
+    "category": "Display Technology",
     "tags": ["Smartphones", "Display Technology", "OLED"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 3.5,
@@ -119,6 +128,7 @@
   {
     "title": "Unleashing the Power of Artificial Intelligence in Smartphones",
     "date": "November 8, 2023",
+    "category": "Artificial Intelligence",
     "tags": ["Artificial Intelligence", "Smartphones", "Innovation"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.7,
@@ -131,6 +141,7 @@
   {
     "title": "The Green Revolution: Sustainable Practices in Smartphone Manufacturing",
     "date": "December 01, 2023",
+    "category": "Sustainable",
     "tags": ["Smartphones", "Sustainability", "Technology"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.5,
@@ -143,6 +154,7 @@
   {
     "title": "Gaming on the Go: The Revolution of Mobile Gaming",
     "date": "January 18, 2023",
+    "category": "Mobile Gaming",
     "tags": ["Mobile Gaming", "Smartphones", "Gaming Trends"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 1.8,
@@ -155,6 +167,7 @@
   {
     "title": "The Art of Smartphone Customization: Personalizing Your Device",
     "date": "February 12, 2023",
+    "category": "Customization",
     "tags": ["Smartphones", "Customization", "User Experience"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.2,
@@ -167,6 +180,7 @@
   {
     "title": "The Role of Smartphones in Remote Work: A Post-Pandemic Perspective",
     "date": "March 22, 2023",
+    "category": "Remote Work",
     "tags": ["Smartphones", "Remote Work", "Technology"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 1,
@@ -179,6 +193,7 @@
   {
     "title": "The Art of Smartphone Filmmaking: Creating Cinematic Moments on the Go",
     "date": "April 15, 2023",
+    "category": "Filmmaking",
     "tags": ["Smartphones", "Filmmaking", "Mobile Photography"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 3.2,
@@ -191,6 +206,7 @@
   {
     "title": "The Impact of 6G Technology on Smartphones",
     "date": "May 10, 2023",
+    "category": "Technology",
     "tags": ["6G", "Technology", "Connectivity"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.7,
@@ -201,8 +217,22 @@
     }
   },
   {
+    "title": "Impact of U.S. Restrictions on Huawei's Global Operations",
+    "date": "August 20, 2023",
+    "category": "Global Affairs",
+    "tags": ["Huawei", "Restrictions", "Global Operations"],
+    "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
+    "views": 7.2,
+    "content": {
+      "introduction": "Huawei faces a significant setback as the impact of U.S. restrictions reverberates across its global operations, marking a challenging chapter in the company's history.",
+      "body": "The restrictions, aimed at limiting Huawei's access to critical technologies and components, have led to disruptions in the supply chain, hampering the production of key devices and infrastructure. Additionally, the company is navigating geopolitical challenges that have strained international partnerships.",
+      "conclusion": "As Huawei works to address the challenges posed by the restrictions, the global tech landscape watches closely, recognizing the implications for the industry. Stay tuned for updates on how Huawei adapts and strategizes in the face of these unprecedented challenges."
+    }
+  },
+  {
     "title": "Mastering Smartphone Photography: Pro Tips for Stunning Shots",
     "date": "June 05, 2023",
+    "category": "Photography",
     "tags": ["Photography", "Smartphones", "Photography Tips"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 1.5,
@@ -215,6 +245,7 @@
   {
     "title": "The Evolution of Smartphone Design: Trends and Innovations",
     "date": "July 20, 2023",
+    "category": "Design",
     "tags": ["Smartphones", "Design", "Innovation"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.1,
@@ -225,8 +256,22 @@
     }
   },
   {
+    "title": "Huawei's Breakthrough in 6G Technology",
+    "date": "January 5, 2023",
+    "category": "Technology",
+    "tags": ["Huawei", "Technology", "6G"],
+    "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
+    "views": 4.5,
+    "content": {
+      "introduction": "In a groundbreaking achievement, Huawei has emerged as a key player in the development of 6G technology, showcasing its commitment to innovation and technological advancement.",
+      "body": "Huawei's research and development efforts in the realm of 6G have led to significant contributions, including advancements in data transfer speeds, ultra-low latency, and revolutionary applications that have the potential to reshape the future of connectivity.",
+      "conclusion": "As Huawei continues to push the boundaries of technology, the success in 6G development positions the company at the forefront of the next generation of wireless communication. Stay tuned for more updates as Huawei pioneers the evolution of connectivity."
+    }
+  },
+  {
     "title": "The Role of Smartphones in Health and Wellness",
     "date": "August 15, 2023",
+    "category": "Health",
     "tags": ["Smartphones", "Health", "Wellness"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 2.9,
@@ -239,6 +284,7 @@
   {
     "title": "The Rise of Budget-Friendly Smartphones: Unveiling Hidden Gems",
     "date": "September 10, 2023",
+    "category": "Budget-Friendly",
     "tags": ["Smartphones", "Budget-Friendly", "Technology"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
     "views": 1.2,
