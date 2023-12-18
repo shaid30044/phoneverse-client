@@ -68,10 +68,19 @@ const SignUp = () => {
           email: res.user?.email,
           photoURL: res.user?.photoURL,
         };
-        axiosPublic
-          .post("/users", userInfo, { withCredentials: true })
+        toast
+          .promise(
+            axiosPublic.post("/users", userInfo, { withCredentials: true }),
+            {
+              loading: "Signing Up...",
+              success: <b>Sign Up successful!</b>,
+              error: <b>Sign Up failed!</b>,
+            },
+            {
+              duration: 4000,
+            }
+          )
           .then(() => {
-            toast.success("Successfully Singing Up!");
             navigate("/");
           });
       })
@@ -88,10 +97,19 @@ const SignUp = () => {
           email: res.user?.email,
           photoURL: res.user?.photoURL,
         };
-        axiosPublic
-          .post("/users", userInfo, { withCredentials: true })
+        toast
+          .promise(
+            axiosPublic.post("/users", userInfo, { withCredentials: true }),
+            {
+              loading: "Signing Up...",
+              success: <b>Sign Up successful!</b>,
+              error: <b>Sign Up failed!</b>,
+            },
+            {
+              duration: 4000,
+            }
+          )
           .then(() => {
-            toast.success("Successfully Singing Up!");
             navigate("/");
           });
       })
@@ -102,13 +120,13 @@ const SignUp = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Phone Verse | Sign Up</title>
-      </Helmet>
-
       <div>
         <Toaster />
       </div>
+
+      <Helmet>
+        <title>Phone Verse | Sign Up</title>
+      </Helmet>
 
       <div className="bg-past h-screen p-4">
         <div className="grid md:grid-cols-2 bg-white h-full">
