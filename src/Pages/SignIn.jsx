@@ -13,7 +13,7 @@ const SignIn = () => {
       </Helmet>
 
       <div className="bg-past h-screen p-4">
-        <div className="grid md:grid-cols-2 bg-white rounded-xl h-full">
+        <div className="grid md:grid-cols-2 bg-white h-full">
           <div className="relative p-6 lg:px-20 md:py-10">
             <div className="w-20">
               <Link to="/">
@@ -82,12 +82,8 @@ const SignIn = () => {
             </div>
           </div>
 
-          <div className="hidden md:block rounded-r-xl h-full">
-            <img
-              src={phone}
-              alt="phone"
-              className="rounded-r-xl object-cover h-full"
-            />
+          <div className="hidden md:block h-full">
+            <img src={phone} alt="phone" className="object-cover h-full" />
           </div>
         </div>
       </div>

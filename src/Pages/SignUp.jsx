@@ -4,12 +4,16 @@ import logo from "../assets/phoneverse-logo.png";
 import phone from "../assets/sign.jpg";
 import Button from "../Shared/Button/Button";
 import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
+import toast, { Toaster } from "react-hot-toast";
 
 const SignUp = () => {
-  const { createUser, updateProfile, googleLogin } =
+  const axiosPublic = useAxiosPublic();
+  const { signUp, updateUserProfile, googleSignIn, facebookSignIn } =
     useContext(AuthContext) || {};
   const navigate = useNavigate();
   const {
@@ -19,35 +23,81 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const [registerError, setRegisterError] = useState("");
+  const [signUpError, setSignUpError] = useState("");
 
   const onSubmit = (data) => {
-    const userInfo = {
-      firstName: data.firstName,
-      lastName: data.lastName,
-      displayName: data.firstName + " " + data.lastName,
-      email: data.email,
-    };
+    signUp(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
 
-    console.log(userInfo);
+      const displayName = data.firstName + " " + data.lastName;
 
-    // createUser(data.email, data.password).then((result) => {
-    //   const loggedUser = result.user;
-    //   console.log(loggedUser);
+      updateUserProfile(displayName)
+        .then(() => {
+          const userInfo = {
+            firstName: data.firstName,
+            lastName: data.lastName,
+            displayName: data.firstName + " " + data.lastName,
+            email: data.email,
+          };
 
-    //   updateProfile(data.name, data.photoURL).then(() => {});
-    // });
+          console.log(userInfo);
+
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.status === 200) {
+              reset();
+
+              toast.success("Successfully Singing Up!");
+              navigate("/");
+            }
+          });
+        })
+        .catch((error) => {
+          setSignUpError(error.message);
+
+          console.log(error);
+        });
+    });
   };
 
-  const handleGoogleLogin = () => {
-    // googleLogin()
-    //   .then((res) => {
-    //     console.log(res.user);
-    //   })
-    //   .catch((error) => {
-    //     setRegisterError(error.message);
-    //     console.error("Google login error:", error);
-    //   });
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        const userInfo = {
+          displayName: res.user?.displayName,
+          email: res.user?.email,
+          photoURL: res.user?.photoURL,
+        };
+        axiosPublic
+          .post("/users", userInfo, { withCredentials: true })
+          .then(() => {
+            toast.success("Successfully Singing Up!");
+            navigate("/");
+          });
+      })
+      .catch((error) => {
+        setSignUpError(error.message);
+      });
+  };
+
+  const handleFacebookSignIn = () => {
+    facebookSignIn()
+      .then((res) => {
+        const userInfo = {
+          displayName: res.user?.displayName,
+          email: res.user?.email,
+          photoURL: res.user?.photoURL,
+        };
+        axiosPublic
+          .post("/users", userInfo, { withCredentials: true })
+          .then(() => {
+            toast.success("Successfully Singing Up!");
+            navigate("/");
+          });
+      })
+      .catch((error) => {
+        setSignUpError(error.message);
+      });
   };
 
   return (
@@ -56,8 +106,12 @@ const SignUp = () => {
         <title>Phone Verse | Sign Up</title>
       </Helmet>
 
+      <div>
+        <Toaster />
+      </div>
+
       <div className="bg-past h-screen p-4">
-        <div className="grid md:grid-cols-2 bg-white rounded-xl h-full">
+        <div className="grid md:grid-cols-2 bg-white h-full">
           <div className="relative p-6 lg:px-20 md:py-10">
             <div className="w-20">
               <Link to="/">
@@ -92,13 +146,21 @@ const SignUp = () => {
                 </li>
               </ul>
 
-              <div>
+              <div className="space-y-4">
                 <button
-                  onClick={handleGoogleLogin}
+                  onClick={handleGoogleSignIn}
                   className="btn btn-sm text-lg font-normal shadow-none bg-transparent hover:bg-transparent border-2 border-past rounded-none duration-300 h-10 w-full"
                 >
                   <FcGoogle />
                   <span>Sign Up With Google</span>
+                </button>
+
+                <button
+                  onClick={handleFacebookSignIn}
+                  className="btn btn-sm text-lg font-normal shadow-none bg-transparent hover:bg-transparent border-2 border-past rounded-none duration-300 h-10 w-full"
+                >
+                  <FaFacebook className="text-[#2365FF]" />
+                  <span>Sign Up With Facebook</span>
                 </button>
               </div>
 
@@ -157,7 +219,7 @@ const SignUp = () => {
                         /(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-])(?=.*[0-9])(?=.*[a-z])/,
                     })}
                     placeholder="Password"
-                    className="bg-past/70 outline-none w-full px-4 py-2 mb-2"
+                    className="bg-past/70 outline-none w-full px-4 py-2"
                   />
                   {errors.password?.type === "required" && (
                     <span className="text-red">Password is required</span>
@@ -180,9 +242,11 @@ const SignUp = () => {
                   )}
                 </p>
 
-                <div className="text-center -mb-4">
-                  {registerError && (
-                    <p className="text-sm text-red-600">{registerError}</p>
+                {/* sign up error */}
+
+                <div className="text-center">
+                  {signUpError && (
+                    <p className="text-sm text-red-600">{signUpError}</p>
                   )}
                 </div>
 
@@ -200,12 +264,8 @@ const SignUp = () => {
             </div>
           </div>
 
-          <div className="hidden md:block rounded-r-xl h-full">
-            <img
-              src={phone}
-              alt="phone"
-              className="rounded-r-xl object-cover h-full"
-            />
+          <div className="hidden md:block h-full">
+            <img src={phone} alt="phone" className="object-cover h-full" />
           </div>
         </div>
       </div>
