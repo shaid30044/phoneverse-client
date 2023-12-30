@@ -7,7 +7,7 @@ const AllPhones = ({ phone }) => {
   return (
     <div className="group">
       <div className="relative bg-past">
-        <div className="relative overflow-hidden flex justify-center items-center bg-cover bg-no-repeat h-48 group-hover:-ml-[15%] sm:group-hover:-ml-[15%] lg:group-hover:-ml-[15%] group-hover:scale-110 sm:group-hover:scale-75 lg:group-hover:scale-110 duration-500 p-4">
+        <div className="relative overflow-hidden flex justify-center items-center bg-cover bg-no-repeat h-48 group-hover:-ml-[15%] sm:group-hover:-ml-[15%] lg:group-hover:-ml-[15%] group-hover:scale-105 sm:group-hover:scale-75 lg:group-hover:scale-105 duration-500 p-4">
           <img src={phone.image} className="h-40" />
         </div>
 

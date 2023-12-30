@@ -9,6 +9,7 @@ import {
   MdArrowBackIosNew,
 } from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
+import "./scrollbar.css";
 
 const options = [
   { value: "default", label: "Default" },
@@ -84,7 +85,7 @@ const Filter = () => {
   const [selectedStorage, setSelectedStorage] = useState(storageOptions[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(pageOptions[0].value);
+  const [itemsPerPage, setItemsPerPage] = useState(pageOptions[1].value);
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -646,9 +647,11 @@ const Filter = () => {
               </div>
             ) : (
               <div className="bg-white py-4">
-                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-[100vh] overflow-x-hidden overflow-y-scroll p-4 sm:-mr-[16.5px]">
+                <div className="example grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-[100vh] overflow-x-hidden overflow-y-scroll p-4">
                   {currentMobiles.map((mobile, idx) => (
-                    <AllMobiles key={idx} phone={mobile} />
+                    <div key={idx}>
+                      <AllMobiles phone={mobile} />
+                    </div>
                   ))}
                 </div>
 
