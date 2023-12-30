@@ -22,8 +22,8 @@ const Navbar = () => {
       path: "/cart",
     },
     {
-      page: "Blog",
-      path: "/blog",
+      page: "Blogs",
+      path: "/blogs",
     },
     {
       page: "Dashboard",

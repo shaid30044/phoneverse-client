@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import {
   MdOutlineBookmarks,
-  MdBookmarks,
+  // MdBookmarks,
   MdArrowForwardIos,
   MdArrowBackIosNew,
 } from "react-icons/md";
@@ -33,8 +33,22 @@ const Blogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(pageOptions[1].value);
 
+  const categories = [
+    { value: "all", label: "All Categories" },
+    ...[...new Set(blogs.map((blog) => blog.category))].map((category) => ({
+      value: category,
+      label: category,
+    })),
+  ];
+
+  const [categoryFilter, setCategoryFilter] = useState(categories[0]);
+
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
+  };
+
+  const handleCategoryChange = (selectedOption) => {
+    setCategoryFilter(selectedOption);
   };
 
   const handleSortChange = (selectedOption) => {
@@ -45,6 +59,12 @@ const Blogs = () => {
     let filteredBlogs = blogs.filter((b) =>
       b.title.toLowerCase().includes(search.toLowerCase())
     );
+
+    if (categoryFilter.value !== "all") {
+      filteredBlogs = filteredBlogs.filter(
+        (b) => b.category === categoryFilter.value
+      );
+    }
 
     switch (sortOption.value) {
       case "recent":
@@ -137,9 +157,9 @@ const Blogs = () => {
 
           <div className="hidden sm:block w-52">
             <Select
-              options={options}
-              value={sortOption}
-              onChange={handleSortChange}
+              options={categories}
+              value={categoryFilter}
+              onChange={handleCategoryChange}
             />
           </div>
 
@@ -158,13 +178,13 @@ const Blogs = () => {
           </div>
         </div>
 
-        {/* sort by option */}
+        {/* sort by category */}
 
         <div className="sm:hidden w-full">
           <Select
-            options={options}
-            value={sortOption}
-            onChange={handleSortChange}
+            options={categories}
+            value={categoryFilter}
+            onChange={handleCategoryChange}
           />
         </div>
       </div>

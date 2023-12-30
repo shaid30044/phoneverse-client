@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <Phones />,
       },
       {
-        path: "/blog",
+        path: "/blogs",
         element: <Blog />,
       },
       {
