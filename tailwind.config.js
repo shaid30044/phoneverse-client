@@ -10,6 +10,9 @@ export default {
         primary: "#ee4037",
         past: "#F0F0F4",
       },
+      rotate: {
+        135: "135deg",
+      },
     },
   },
   plugins: [require("daisyui")],

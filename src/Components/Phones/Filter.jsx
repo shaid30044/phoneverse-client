@@ -3,13 +3,25 @@ import AllMobiles from "../Phones/AllPhones";
 import Select from "react-select";
 import Drawer from "react-modern-drawer";
 import NotFound from "../../Shared/NotFound";
-import { MdOutlineFilterList } from "react-icons/md";
+import {
+  MdOutlineFilterList,
+  MdArrowForwardIos,
+  MdArrowBackIosNew,
+} from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
 
 const options = [
   { value: "default", label: "Default" },
   { value: "highToLow", label: "$High - $Low" },
   { value: "lowToHigh", label: "$Low - $High" },
+];
+
+const pageOptions = [
+  { value: 5, label: "5 items per page" },
+  { value: 10, label: "10 items per page" },
+  { value: 20, label: "20 items per page" },
+  { value: 50, label: "50 items per page" },
+  { value: 100, label: "100 items per page" },
 ];
 
 const processorOptions = [
@@ -57,7 +69,7 @@ const Filter = () => {
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortOption, setSortOption] = useState(options[0]);
+  const [selectedPriceSort, setSelectedPriceSort] = useState(options[0]);
   const [selectedProcessor, setSelectedProcessor] = useState(
     processorOptions[0]
   );
@@ -71,6 +83,8 @@ const Filter = () => {
   const [isStorageAccordionOpen, setIsStorageAccordionOpen] = useState(false);
   const [selectedStorage, setSelectedStorage] = useState(storageOptions[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(pageOptions[0].value);
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -96,10 +110,6 @@ const Filter = () => {
   };
 
   // sort by price
-
-  const handleSortChange = (selectedOption) => {
-    setSortOption(selectedOption);
-  };
 
   // filter by brand
 
@@ -190,20 +200,44 @@ const Filter = () => {
 
   const sortedMobiles = [...filteredMobiles];
 
-  if (sortOption.value === "highToLow") {
+  if (selectedPriceSort.value === "highToLow") {
     sortedMobiles.sort((a, b) => b.price - a.price);
-  } else if (sortOption.value === "lowToHigh") {
+  } else if (selectedPriceSort.value === "lowToHigh") {
     sortedMobiles.sort((a, b) => a.price - b.price);
+  }
+
+  const indexOfLastMobile = currentPage * itemsPerPage;
+  const indexOfFirstMobile = indexOfLastMobile - itemsPerPage;
+  const currentMobiles = sortedMobiles.slice(
+    indexOfFirstMobile,
+    indexOfLastMobile
+  );
+
+  const handlePageChange = (pageNumber, itemsPerPage) => {
+    if (
+      pageNumber < 1 ||
+      pageNumber > Math.ceil(filteredMobiles.length / itemsPerPage)
+    ) {
+      return;
+    }
+
+    setCurrentPage(pageNumber);
+    setItemsPerPage(itemsPerPage);
+  };
+
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(filteredMobiles.length / itemsPerPage); i++) {
+    pageNumbers.push(i);
   }
 
   return (
     <div>
       {/* for small devices */}
 
-      <div className="md:hidden fixed z-50 flex justify-center items-center bg-white ring-2 ring-primary rounded-full w-12 h-12">
+      <div className="md:hidden fixed z-50 flex justify-center items-center bg-primary rounded-r-full w-10 h-10 -ml-4">
         <button
           onClick={toggleDrawer}
-          className="btn btn-sm bg-transparent hover:bg-transparent text-2xl shadow-none border-none drawer-button"
+          className="btn btn-sm bg-transparent hover:bg-transparent text-2xl text-white shadow-none border-none drawer-button pr-4"
         >
           <MdOutlineFilterList />
         </button>
@@ -395,7 +429,7 @@ const Filter = () => {
       </div>
 
       <div className="grid md:grid-cols-3 xl:grid-cols-4 gap-4">
-        <div className="hidden md:block bg-white max-h-[940px] p-4">
+        <div className="hidden md:block bg-white p-4">
           <div className="flex items-center gap-2 text-2xl pb-4">
             <p>Filter</p>
             <MdOutlineFilterList />
@@ -578,27 +612,88 @@ const Filter = () => {
           </div>
 
           <div>
-            <div className="bg-white px-4 pt-4">
+            <div className="flex justify-between gap-4 bg-white px-4 pt-4">
               {/* sort by price */}
 
-              <div className="w-48">
+              <div className="sm:w-48">
                 <Select
                   options={options}
-                  value={sortOption}
-                  onChange={handleSortChange}
+                  value={selectedPriceSort}
+                  onChange={(selectedOption) =>
+                    setSelectedPriceSort(selectedOption)
+                  }
+                />
+              </div>
+
+              {/* sort by item */}
+
+              <div className="sm:w-48">
+                <Select
+                  options={pageOptions}
+                  value={pageOptions.find(
+                    (option) => option.value === itemsPerPage
+                  )}
+                  onChange={(selectedOption) =>
+                    setItemsPerPage(selectedOption.value)
+                  }
                 />
               </div>
             </div>
 
-            {sortedMobiles.length === 0 ? (
+            {currentMobiles.length === 0 ? (
               <div className="flex justify-center py-10">
                 <NotFound />
               </div>
             ) : (
-              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white p-4">
-                {sortedMobiles.map((mobile, idx) => (
-                  <AllMobiles key={idx} phone={mobile} />
-                ))}
+              <div className="bg-white py-4">
+                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-[100vh] overflow-x-hidden overflow-y-scroll p-4 sm:-mr-[16.5px]">
+                  {currentMobiles.map((mobile, idx) => (
+                    <AllMobiles key={idx} phone={mobile} />
+                  ))}
+                </div>
+
+                {/* pagination buttons */}
+
+                <div
+                  className="flex justify-center items-center gap-4
+                  sm:gap-8 mt-4 px-4"
+                >
+                  <p
+                    className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
+                    onClick={() =>
+                      handlePageChange(currentPage - 1, itemsPerPage)
+                    }
+                    disabled={currentPage === 1}
+                  >
+                    <MdArrowBackIosNew />
+                  </p>
+
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {pageNumbers.map((number) => (
+                      <p
+                        key={number}
+                        onClick={() => handlePageChange(number, itemsPerPage)}
+                        className={`rounded-full w-6 h-6 px-2 ${
+                          number === currentPage
+                            ? "bg-primary hover:bg-primary text-white cursor-pointer"
+                            : "bg-past hover:bg-primary hover:text-white text-black duration-300 cursor-pointer"
+                        }`}
+                      >
+                        {number}
+                      </p>
+                    ))}
+                  </div>
+
+                  <p
+                    className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
+                    onClick={() =>
+                      handlePageChange(currentPage + 1, itemsPerPage)
+                    }
+                    disabled={currentPage === pageNumbers.length}
+                  >
+                    <MdArrowForwardIos />
+                  </p>
+                </div>
               </div>
             )}
           </div>
