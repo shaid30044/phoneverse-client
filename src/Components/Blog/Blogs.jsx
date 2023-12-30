@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaRegEye } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineBookmarks, MdBookmarks } from "react-icons/md";
 import Select from "react-select";
 import NotFound from "../../Shared/NotFound";
@@ -115,7 +115,7 @@ const Blogs = () => {
                 <div className="flex items-center gap-5">
                   <p className="flex items-center gap-1 text-black/70">
                     <span>
-                      <FaRegEye />
+                      <FaRegHeart />
                     </span>
                     {blog.views}k
                   </p>

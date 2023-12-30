@@ -1,15 +1,33 @@
+import { FaRegEye } from "react-icons/fa";
+import { MdArrowForwardIos } from "react-icons/md";
 import { FaRegHeart, FaHeart } from "react-icons/fa6";
 import { RiShoppingCart2Line, RiShoppingCart2Fill } from "react-icons/ri";
-import Button from "../../Shared/Button/Button";
 
 const AllPhones = ({ phone }) => {
   return (
-    <div>
-      <div className="relative overflow-hidden flex justify-center items-center bg-past bg-cover bg-no-repeat h-48 p-4">
-        <img
-          src={phone.image}
-          className="transition duration-500 ease-in-out hover:scale-110 h-40"
-        />
+    <div className="group">
+      <div className="relative bg-past">
+        <div className="relative overflow-hidden flex justify-center items-center bg-cover bg-no-repeat h-48 group-hover:-ml-[15%] sm:group-hover:-ml-[15%] lg:group-hover:-ml-[15%] group-hover:scale-110 sm:group-hover:scale-75 lg:group-hover:scale-110 duration-500 p-4">
+          <img src={phone.image} className="h-40" />
+        </div>
+
+        <div className="absolute top-1/2 -translate-y-1/2 right-1 group-hover:right-6 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 duration-500 gap-2">
+          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+            <FaRegHeart />
+          </button>
+
+          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+            <RiShoppingCart2Line />
+          </button>
+
+          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+            <FaRegEye />
+          </button>
+
+          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+            <MdArrowForwardIos />
+          </button>
+        </div>
       </div>
 
       <div className="pt-2">
@@ -46,25 +64,7 @@ const AllPhones = ({ phone }) => {
             <p className="text-black">
               <span className="font-medium">Price: </span>${phone.price}
             </p>
-
-            <div className="flex items-center gap-8">
-              <div className="relative bg-cover bg-no-repeat">
-                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
-                  <FaRegHeart />
-                </button>
-              </div>
-
-              <div className="relative bg-cover bg-no-repeat">
-                <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
-                  <RiShoppingCart2Line />
-                </button>
-              </div>
-            </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-1">
-          <Button type={"Details"} />
         </div>
       </div>
     </div>
