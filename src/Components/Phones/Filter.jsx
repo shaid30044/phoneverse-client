@@ -110,8 +110,6 @@ const Filter = () => {
     setSearchQuery(event.target.value);
   };
 
-  // sort by price
-
   // filter by brand
 
   const handleBrandClick = (brand) => {
@@ -613,10 +611,10 @@ const Filter = () => {
           </div>
 
           <div>
-            <div className="flex justify-between gap-4 bg-white px-4 pt-4">
+            <div className="flex justify-between gap-4 bg-white px-4 py-4">
               {/* sort by price */}
 
-              <div className="sm:w-48">
+              <div className="w-1/2 sm:w-52">
                 <Select
                   options={options}
                   value={selectedPriceSort}
@@ -628,7 +626,7 @@ const Filter = () => {
 
               {/* sort by item */}
 
-              <div className="sm:w-48">
+              <div className="w-1/2 sm:w-52">
                 <Select
                   options={pageOptions}
                   value={pageOptions.find(
@@ -646,8 +644,8 @@ const Filter = () => {
                 <NotFound />
               </div>
             ) : (
-              <div className="bg-white py-4">
-                <div className="example grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-[100vh] overflow-x-hidden overflow-y-scroll p-4">
+              <div className="bg-white">
+                <div className="example grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-screen overflow-x-hidden overflow-y-scroll p-4">
                   {currentMobiles.map((mobile, idx) => (
                     <div key={idx}>
                       <AllMobiles phone={mobile} />
@@ -659,7 +657,7 @@ const Filter = () => {
 
                 <div
                   className="flex justify-center items-center gap-4
-                  sm:gap-8 mt-4 px-4"
+                  sm:gap-8 p-4"
                 >
                   <p
                     className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
