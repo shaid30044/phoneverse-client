@@ -429,7 +429,7 @@ const Filter = () => {
 
       <div className="grid md:grid-cols-3 xl:grid-cols-4 gap-4">
         <div className="hidden md:block bg-white p-4">
-          <div className="flex items-center gap-2 text-2xl pb-4">
+          <div className="flex justify-between items-center gap-2 text-2xl pb-4">
             <p>Filter</p>
             <MdOutlineFilterList />
           </div>
@@ -602,7 +602,7 @@ const Filter = () => {
                 type="search"
                 name="search"
                 id="search"
-                placeholder="Search Mobile"
+                placeholder="Search Phone Here..."
                 className="border-2 outline-none rounded-md w-full px-5 py-2"
                 value={searchQuery}
                 onChange={handleSearchChange}
@@ -645,7 +645,7 @@ const Filter = () => {
               </div>
             ) : (
               <div className="bg-white">
-                <div className="example grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-screen overflow-x-hidden overflow-y-scroll p-4">
+                <div className="example grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
                   {currentMobiles.map((mobile, idx) => (
                     <div key={idx}>
                       <AllMobiles phone={mobile} />
@@ -660,7 +660,7 @@ const Filter = () => {
                   sm:gap-8 p-4"
                 >
                   <p
-                    className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
+                    className="flex justify-center items-center text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-5 h-5 px-1"
                     onClick={() =>
                       handlePageChange(currentPage - 1, itemsPerPage)
                     }
@@ -674,10 +674,10 @@ const Filter = () => {
                       <p
                         key={number}
                         onClick={() => handlePageChange(number, itemsPerPage)}
-                        className={`rounded-full w-6 h-6 px-2 ${
+                        className={`flex justify-center items-center rounded-full w-5 h-5 px-2 ${
                           number === currentPage
-                            ? "bg-primary hover:bg-primary text-white cursor-pointer"
-                            : "bg-past hover:bg-primary hover:text-white text-black duration-300 cursor-pointer"
+                            ? "bg-primary hover:bg-primary text-sm font-medium text-white cursor-pointer"
+                            : "bg-past hover:bg-primary text-sm font-medium hover:text-white text-black duration-300 cursor-pointer"
                         }`}
                       >
                         {number}
@@ -686,7 +686,7 @@ const Filter = () => {
                   </div>
 
                   <p
-                    className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
+                    className="flex justify-center items-center text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-5 h-5 px-1"
                     onClick={() =>
                       handlePageChange(currentPage + 1, itemsPerPage)
                     }

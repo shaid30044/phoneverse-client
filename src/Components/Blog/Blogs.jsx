@@ -133,7 +133,7 @@ const Blogs = () => {
             type="search"
             name="search"
             id="search"
-            placeholder="Search here..."
+            placeholder="Search Blog Here..."
             value={search}
             onChange={handleSearchChange}
             className="border-2 outline-none rounded-md w-full px-5 py-2"
@@ -145,7 +145,7 @@ const Blogs = () => {
         <div className="flex justify-between gap-4">
           {/* sort by option */}
 
-          <div className="w-1/2 sm:w-52">
+          <div className="w-1/2 sm:w-1/3">
             <Select
               options={options}
               value={sortOption}
@@ -155,7 +155,7 @@ const Blogs = () => {
 
           {/* sort by category */}
 
-          <div className="hidden sm:block w-52">
+          <div className="hidden sm:block w-1/3">
             <Select
               options={categories}
               value={categoryFilter}
@@ -165,7 +165,7 @@ const Blogs = () => {
 
           {/* sort by item */}
 
-          <div className="w-1/2 sm:w-52">
+          <div className="w-1/2 sm:w-1/3">
             <Select
               options={pageOptions}
               value={pageOptions.find(
@@ -189,13 +189,13 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className="bg-white py-4">
+      <div className="bg-white pt-4">
         {currentMobiles.length === 0 ? (
           <div className="flex justify-center items-center pt-10">
             <NotFound />
           </div>
         ) : (
-          <div className="example grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 md:gap-6 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
+          <div className="example grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 md:gap-4 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
             {currentMobiles.map((blog, idx) => (
               <div key={idx}>
                 <div className="relative overflow-hidden flex justify-center items-center bg-past bg-cover bg-no-repeat">
@@ -240,12 +240,9 @@ const Blogs = () => {
 
         {/* pagination buttons */}
 
-        <div
-          className="flex justify-center items-center gap-4
-                  sm:gap-8 p-4"
-        >
+        <div className="flex justify-center items-center gap-4 sm:gap-8 p-4">
           <p
-            className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
+            className="flex justify-center items-center text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-5 h-5 px-1"
             onClick={() => handlePageChange(currentPage - 1, itemsPerPage)}
             disabled={currentPage === 1}
           >
@@ -257,10 +254,10 @@ const Blogs = () => {
               <p
                 key={number}
                 onClick={() => handlePageChange(number, itemsPerPage)}
-                className={`rounded-full w-6 h-6 px-2 ${
+                className={`flex justify-center items-center rounded-full w-5 h-5 px-2 ${
                   number === currentPage
-                    ? "bg-primary hover:bg-primary text-white cursor-pointer"
-                    : "bg-past hover:bg-primary hover:text-white text-black duration-300 cursor-pointer"
+                    ? "bg-primary hover:bg-primary text-sm font-medium text-white cursor-pointer"
+                    : "bg-past hover:bg-primary text-sm font-medium hover:text-white text-black duration-300 cursor-pointer"
                 }`}
               >
                 {number}
@@ -269,7 +266,7 @@ const Blogs = () => {
           </div>
 
           <p
-            className="flex justify-center items-center sm:text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-6 h-6 px-1"
+            className="flex justify-center items-center text-sm rounded-full bg-past hover:bg-primary text-black hover:text-white duration-300 cursor-pointer w-5 h-5 px-1"
             onClick={() => handlePageChange(currentPage + 1, itemsPerPage)}
             disabled={currentPage === pageNumbers.length}
           >
