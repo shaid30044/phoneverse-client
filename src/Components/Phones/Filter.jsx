@@ -35,7 +35,7 @@ const refreshRateOptions = [
 
 const peakBrightnessOptions = [
   { value: "all", label: "All" },
-  { value: "1-500", label: "500 nits" },
+  { value: "1-500", label: "1 ~ 500 nits" },
   { value: "500-1000", label: "500 ~ 1000 nits" },
   { value: "1000-1500", label: "1000 ~ 1500 nits" },
   { value: "1500-2000", label: "1500 ~ 2000 nits" },
@@ -80,6 +80,18 @@ const storageOptions = [
   { value: 1, label: "1TB" },
 ];
 
+const batteryOptions = [
+  { value: "all", label: "All" },
+  { value: "1-3000", label: "1 ~ 3000 mAH" },
+  { value: "3000-3500", label: "3000 ~ 3500 mAH" },
+  { value: "3500-4000", label: "3500 ~ 4000 mAH" },
+  { value: "4000-4500", label: "4000 ~ 4500 mAH" },
+  { value: "4500-5000", label: "4500 ~ 5000 mAH" },
+  { value: "5000-5500", label: "5000 ~ 5500 mAH" },
+  { value: "5500-6000", label: "5500 ~ 6000 mAH" },
+  { value: "6000+", label: "6000+ mAH" },
+];
+
 const Filter = () => {
   const [mobiles, setMobiles] = useState([]);
 
@@ -116,6 +128,8 @@ const Filter = () => {
   const [selectedMemory, setSelectedMemory] = useState(memoryOptions[0]);
   const [isStorageAccordionOpen, setIsStorageAccordionOpen] = useState(false);
   const [selectedStorage, setSelectedStorage] = useState(storageOptions[0]);
+  const [isBatteryAccordionOpen, setIsBatteryAccordionOpen] = useState(false);
+  const [selectedBattery, setSelectedBattery] = useState(storageOptions[0]);
   const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(pageOptions[1].value);
@@ -185,6 +199,12 @@ const Filter = () => {
     setSelectedStorage(selectedOption);
   };
 
+  // filter by battery
+
+  const handleBatteryChange = (selectedOption) => {
+    setSelectedBattery(selectedOption);
+  };
+
   const filteredMobiles = mobiles.filter((mobile) => {
     // search functionality
 
@@ -250,6 +270,18 @@ const Filter = () => {
       selectedStorage.value === "all" ||
       mobile.storage.capacity.includes(selectedStorage.value);
 
+    // peak brightness filtering
+
+    const includesSelectedBattery =
+      !selectedBattery ||
+      selectedBattery.value === "all" ||
+      (selectedBattery.value === "6000+" && mobile.battery.capacity > 6000) ||
+      (selectedBattery.value !== "6000+" &&
+        mobile.battery.capacity >=
+          parseInt(selectedBattery.value.split("-")[0], 10) &&
+        mobile.battery.capacity <=
+          parseInt(selectedBattery.value.split("-")[1], 10));
+
     return (
       includesSelectedRefreshRate &&
       includesSelectedPeakBrightness &&
@@ -258,7 +290,8 @@ const Filter = () => {
       includesSelectedOS &&
       includesSelectedBrand &&
       includesSelectedMemory &&
-      includesSelectedStorage
+      includesSelectedStorage &&
+      includesSelectedBattery
     );
   });
 
@@ -353,6 +386,55 @@ const Filter = () => {
                           onChange={() => handleRefreshRateChange(refreshRate)}
                         />
                         <span>{refreshRate.label}</span>
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* filter by peak brightness */}
+
+              <div>
+                <div
+                  className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+                  onClick={() =>
+                    setIsPeakBrightnessAccordionOpen((prev) => !prev)
+                  }
+                >
+                  <p>Peak Brightness</p>
+                  <p>
+                    <FaPlus
+                      className={`transform inline-block ${
+                        isPeakBrightnessAccordionOpen
+                          ? "rotate-135"
+                          : "rotate-0"
+                      } transition-transform duration-300`}
+                    />
+                  </p>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-max-height space-y-1 ${
+                    isPeakBrightnessAccordionOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  {peakBrightnessOptions.map((peakBrightness, idx) => (
+                    <div key={idx}>
+                      <label className="flex items-center gap-2 text-lg">
+                        <input
+                          type="checkbox"
+                          id={peakBrightness.value}
+                          value={peakBrightness.value}
+                          className="checkbox checkbox-xs"
+                          checked={
+                            selectedPeakBrightness?.value ===
+                            peakBrightness.value
+                          }
+                          onChange={() =>
+                            handlePeakBrightnessChange(peakBrightness)
+                          }
+                        />
+                        <span>{peakBrightness.label}</span>
                       </label>
                     </div>
                   ))}
@@ -513,6 +595,46 @@ const Filter = () => {
                           onChange={() => handleStorageChange(storage)}
                         />
                         <span>{storage.label}</span>
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* filter by Battery */}
+
+              <div>
+                <div
+                  className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+                  onClick={() => setIsBatteryAccordionOpen((prev) => !prev)}
+                >
+                  <p>Battery</p>
+                  <p>
+                    <FaPlus
+                      className={`transform inline-block ${
+                        isBatteryAccordionOpen ? "rotate-135" : "rotate-0"
+                      } transition-transform duration-300`}
+                    />
+                  </p>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-max-height space-y-1 ${
+                    isBatteryAccordionOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  {batteryOptions.map((battery, idx) => (
+                    <div key={idx}>
+                      <label className="flex items-center gap-2 text-lg">
+                        <input
+                          type="checkbox"
+                          id={battery.value}
+                          value={battery.value}
+                          className="checkbox checkbox-xs"
+                          checked={selectedBattery?.value === battery.value}
+                          onChange={() => handleBatteryChange(battery)}
+                        />
+                        <span>{battery.label}</span>
                       </label>
                     </div>
                   ))}
@@ -783,6 +905,46 @@ const Filter = () => {
                       onChange={() => handleStorageChange(storage)}
                     />
                     <span>{storage.label}</span>
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* filter by Battery */}
+
+          <div>
+            <div
+              className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+              onClick={() => setIsBatteryAccordionOpen((prev) => !prev)}
+            >
+              <p>Battery</p>
+              <p>
+                <FaPlus
+                  className={`transform inline-block ${
+                    isBatteryAccordionOpen ? "rotate-135" : "rotate-0"
+                  } transition-transform duration-300`}
+                />
+              </p>
+            </div>
+
+            <div
+              className={`overflow-hidden transition-max-height space-y-1 ${
+                isBatteryAccordionOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              {batteryOptions.map((battery, idx) => (
+                <div key={idx}>
+                  <label className="flex items-center gap-2 text-lg">
+                    <input
+                      type="checkbox"
+                      id={battery.value}
+                      value={battery.value}
+                      className="checkbox checkbox-xs"
+                      checked={selectedBattery?.value === battery.value}
+                      onChange={() => handleBatteryChange(battery)}
+                    />
+                    <span>{battery.label}</span>
                   </label>
                 </div>
               ))}
