@@ -95,18 +95,29 @@ const batteryOptions = [
 
 const Filter = () => {
   const [mobiles, setMobiles] = useState([]);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(null);
+  const [defaultMax, setDefaultMax] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("./phones.json");
       const data = await res.json();
       setMobiles(data);
+
+      const prices = data.map((mobile) => mobile.price);
+      const max = Math.max(...prices);
+
+      setMaxPrice(max);
+      setDefaultMax(max);
     };
+
     fetchData();
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedPriceSort, setSelectedPriceSort] = useState(options[0]);
+  const [isPriceAccordionOpen, setIsPriceAccordionOpen] = useState(false);
   const [selectedRefreshRate, setSelectedRefreshRate] = useState(
     refreshRateOptions[0]
   );
@@ -213,6 +224,12 @@ const Filter = () => {
       .toLowerCase()
       .includes(searchQuery.toLowerCase());
 
+    // price filtering
+
+    const includesSelectedPrice =
+      (minPrice === null || mobile.price >= minPrice) &&
+      (maxPrice === null || mobile.price <= maxPrice);
+
     // refresh rate filtering
 
     const includesSelectedRefreshRate =
@@ -284,6 +301,7 @@ const Filter = () => {
           parseInt(selectedBattery.value.split("-")[1], 10));
 
     return (
+      includesSelectedPrice &&
       includesSelectedRefreshRate &&
       includesSelectedPeakBrightness &&
       includesSelectedProcessor &&
@@ -300,6 +318,8 @@ const Filter = () => {
 
   const resetFilters = () => {
     setSearchQuery("");
+    setMinPrice(0);
+    setMaxPrice(defaultMax);
     setSelectedPriceSort(options[0]);
     setSelectedRefreshRate(refreshRateOptions[0]);
     setIsRefreshRateAccordionOpen(false);
@@ -329,6 +349,8 @@ const Filter = () => {
   } else if (selectedPriceSort.value === "lowToHigh") {
     sortedMobiles.sort((a, b) => a.price - b.price);
   }
+
+  // pagination
 
   const indexOfLastMobile = currentPage * itemsPerPage;
   const indexOfFirstMobile = indexOfLastMobile - itemsPerPage;
@@ -694,6 +716,50 @@ const Filter = () => {
           <div className="flex justify-between items-center gap-2 text-2xl pb-4">
             <p>Filter</p>
             <MdOutlineFilterList />
+          </div>
+
+          {/* filter by price */}
+
+          <div>
+            <div
+              className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+              onClick={() => setIsPriceAccordionOpen((prev) => !prev)}
+            >
+              <p>Price</p>
+              <p>
+                <FaPlus
+                  className={`transform inline-block ${
+                    isPriceAccordionOpen ? "rotate-135" : "rotate-0"
+                  } transition-transform duration-300`}
+                />
+              </p>
+            </div>
+
+            <div
+              className={`overflow-hidden transition-max-height space-y-1 ${
+                isPriceAccordionOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              <form className="flex flex-col lg:flex-row justify-between items-center gap-2 py-2">
+                <input
+                  type="text"
+                  name="min"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
+                  className="text-center border-2 border-black/40 focus:outline-none w-24 px-2 py-1"
+                />
+
+                <p>to</p>
+
+                <input
+                  type="text"
+                  name="max"
+                  value={maxPrice || ""}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                  className="text-center border-2 border-black/40 focus:outline-none w-24 px-2 py-1"
+                />
+              </form>
+            </div>
           </div>
 
           {/* filter by Refresh Rate */}
