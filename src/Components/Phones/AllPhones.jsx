@@ -1,6 +1,6 @@
 import { MdArrowForwardIos } from "react-icons/md";
-import { FaRegHeart, FaHeart } from "react-icons/fa6";
-import { RiShoppingCart2Line, RiShoppingCart2Fill } from "react-icons/ri";
+import { FaRegHeart /*FaHeart*/ } from "react-icons/fa6";
+import { RiShoppingCart2Line /*RiShoppingCart2Fill*/ } from "react-icons/ri";
 
 const AllPhones = ({ phone }) => {
   return (
@@ -32,6 +32,16 @@ const AllPhones = ({ phone }) => {
           <p>
             <span className="font-medium">Refresh Rate: </span>
             {phone.display.main.refresh_rate}Hz
+          </p>
+
+          <p>
+            <span className="font-medium">Peak Brightness: </span>
+            {phone.display.main.peak_brightness}nits
+          </p>
+
+          <p>
+            <span className="font-medium">Processor: </span>
+            {phone.processor}
           </p>
 
           <div className="flex gap-2">

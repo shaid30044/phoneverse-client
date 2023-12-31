@@ -25,6 +25,29 @@ const pageOptions = [
   { value: 100, label: "100 items per page" },
 ];
 
+const refreshRateOptions = [
+  { value: "all", label: "All" },
+  { value: 60, label: "60Hz" },
+  { value: 90, label: "90Hz" },
+  { value: 120, label: "120Hz" },
+  { value: 144, label: "144Hz" },
+];
+
+const peakBrightnessOptions = [
+  { value: "all", label: "All" },
+  { value: "1-500", label: "500 nits" },
+  { value: "500-1000", label: "500 ~ 1000 nits" },
+  { value: "1000-1500", label: "1000 ~ 1500 nits" },
+  { value: "1500-2000", label: "1500 ~ 2000 nits" },
+  { value: "2000-2500", label: "2000 ~ 2500 nits" },
+  { value: "2500-3000", label: "2500 ~ 3000 nits" },
+  { value: "3000-3500", label: "3000 ~ 3500 nits" },
+  { value: "3500-4000", label: "3500 ~ 4000 nits" },
+  { value: "4000-4500", label: "4000 ~ 4500 nits" },
+  { value: "4500-5000", label: "4500 ~ 5000 nits" },
+  { value: "5000+", label: "5000+ nits" },
+];
+
 const processorOptions = [
   { value: "all", label: "All" },
   { value: "Snapdragon", label: "Snapdragon" },
@@ -43,18 +66,18 @@ const osOptions = [
 
 const memoryOptions = [
   { value: "all", label: "All" },
-  { value: 6, label: "6 GB" },
-  { value: 8, label: "8 GB" },
-  { value: 12, label: "12 GB" },
-  { value: 16, label: "16 GB" },
+  { value: 6, label: "6GB" },
+  { value: 8, label: "8GB" },
+  { value: 12, label: "12GB" },
+  { value: 16, label: "16GB" },
 ];
 
 const storageOptions = [
   { value: "all", label: "All" },
-  { value: 128, label: "128 GB" },
-  { value: 256, label: "256 GB" },
-  { value: 512, label: "512 GB" },
-  { value: 1, label: "1 TB" },
+  { value: 128, label: "128GB" },
+  { value: 256, label: "256GB" },
+  { value: 512, label: "512GB" },
+  { value: 1, label: "1TB" },
 ];
 
 const Filter = () => {
@@ -71,6 +94,16 @@ const Filter = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedPriceSort, setSelectedPriceSort] = useState(options[0]);
+  const [selectedRefreshRate, setSelectedRefreshRate] = useState(
+    refreshRateOptions[0]
+  );
+  const [isRefreshRateAccordionOpen, setIsRefreshRateAccordionOpen] =
+    useState(false);
+  const [selectedPeakBrightness, setSelectedPeakBrightness] = useState(
+    peakBrightnessOptions[0]
+  );
+  const [isPeakBrightnessAccordionOpen, setIsPeakBrightnessAccordionOpen] =
+    useState(false);
   const [selectedProcessor, setSelectedProcessor] = useState(
     processorOptions[0]
   );
@@ -116,7 +149,19 @@ const Filter = () => {
     setSelectedBrand(brand === selectedBrand ? "" : brand);
   };
 
-  // filter by OS
+  // filter by Refresh Rate
+
+  const handleRefreshRateChange = (selectedOption) => {
+    setSelectedRefreshRate(selectedOption);
+  };
+
+  // filter by Peak Brightness
+
+  const handlePeakBrightnessChange = (selectedOption) => {
+    setSelectedPeakBrightness(selectedOption);
+  };
+
+  // filter by Processor
 
   const handleProcessorChange = (selectedOption) => {
     setSelectedProcessor(selectedOption);
@@ -146,6 +191,26 @@ const Filter = () => {
     const includesSearchQuery = mobile.name
       .toLowerCase()
       .includes(searchQuery.toLowerCase());
+
+    // refresh rate filtering
+
+    const includesSelectedRefreshRate =
+      !selectedRefreshRate ||
+      selectedRefreshRate.value === "all" ||
+      mobile.display.main.refresh_rate === selectedRefreshRate.value;
+
+    // peak brightness filtering
+
+    const includesSelectedPeakBrightness =
+      !selectedPeakBrightness ||
+      selectedPeakBrightness.value === "all" ||
+      (selectedPeakBrightness.value === "5000+" &&
+        mobile.display.main.peak_brightness > 5000) ||
+      (selectedPeakBrightness.value !== "5000+" &&
+        mobile.display.main.peak_brightness >=
+          parseInt(selectedPeakBrightness.value.split("-")[0], 10) &&
+        mobile.display.main.peak_brightness <=
+          parseInt(selectedPeakBrightness.value.split("-")[1], 10));
 
     // processor filtering
 
@@ -186,6 +251,8 @@ const Filter = () => {
       mobile.storage.capacity.includes(selectedStorage.value);
 
     return (
+      includesSelectedRefreshRate &&
+      includesSelectedPeakBrightness &&
       includesSelectedProcessor &&
       includesSearchQuery &&
       includesSelectedOS &&
@@ -249,43 +316,87 @@ const Filter = () => {
           className="overflow-scroll"
         >
           <div className="bg-white p-4">
-            {/* filter by processor */}
-
             <div>
-              <div
-                className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
-                onClick={() => setIsProcessorAccordionOpen((prev) => !prev)}
-              >
-                <p>Processor</p>
-                <p>
-                  <FaPlus
-                    className={`transform inline-block ${
-                      isProcessorAccordionOpen ? "rotate-135" : "rotate-0"
-                    } transition-transform duration-300`}
-                  />
-                </p>
+              {/* filter by refresh rate */}
+
+              <div>
+                <div
+                  className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+                  onClick={() => setIsRefreshRateAccordionOpen((prev) => !prev)}
+                >
+                  <p>Refresh Rate</p>
+                  <p>
+                    <FaPlus
+                      className={`transform inline-block ${
+                        isRefreshRateAccordionOpen ? "rotate-135" : "rotate-0"
+                      } transition-transform duration-300`}
+                    />
+                  </p>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-max-height space-y-1 ${
+                    isRefreshRateAccordionOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  {refreshRateOptions.map((refreshRate, idx) => (
+                    <div key={idx}>
+                      <label className="flex items-center gap-2 text-lg">
+                        <input
+                          type="checkbox"
+                          id={refreshRate.value}
+                          value={refreshRate.value}
+                          className="checkbox checkbox-xs"
+                          checked={
+                            selectedRefreshRate?.value === refreshRate.value
+                          }
+                          onChange={() => handleRefreshRateChange(refreshRate)}
+                        />
+                        <span>{refreshRate.label}</span>
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div
-                className={`overflow-hidden transition-max-height space-y-1 ${
-                  isProcessorAccordionOpen ? "max-h-96" : "max-h-0"
-                }`}
-              >
-                {processorOptions.map((processor, idx) => (
-                  <div key={idx}>
-                    <label className="flex items-center gap-2 text-lg">
-                      <input
-                        type="checkbox"
-                        id={processor.value}
-                        value={processor.value}
-                        className="checkbox checkbox-xs"
-                        checked={selectedProcessor?.value === processor.value}
-                        onChange={() => handleProcessorChange(processor)}
-                      />
-                      <span>{processor.label}</span>
-                    </label>
-                  </div>
-                ))}
+              {/* filter by processor */}
+
+              <div>
+                <div
+                  className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+                  onClick={() => setIsProcessorAccordionOpen((prev) => !prev)}
+                >
+                  <p>Processor</p>
+                  <p>
+                    <FaPlus
+                      className={`transform inline-block ${
+                        isProcessorAccordionOpen ? "rotate-135" : "rotate-0"
+                      } transition-transform duration-300`}
+                    />
+                  </p>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-max-height space-y-1 ${
+                    isProcessorAccordionOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  {processorOptions.map((processor, idx) => (
+                    <div key={idx}>
+                      <label className="flex items-center gap-2 text-lg">
+                        <input
+                          type="checkbox"
+                          id={processor.value}
+                          value={processor.value}
+                          className="checkbox checkbox-xs"
+                          checked={selectedProcessor?.value === processor.value}
+                          onChange={() => handleProcessorChange(processor)}
+                        />
+                        <span>{processor.label}</span>
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* filter by OS */}
@@ -432,6 +543,90 @@ const Filter = () => {
           <div className="flex justify-between items-center gap-2 text-2xl pb-4">
             <p>Filter</p>
             <MdOutlineFilterList />
+          </div>
+
+          {/* filter by Refresh Rate */}
+
+          <div>
+            <div
+              className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+              onClick={() => setIsRefreshRateAccordionOpen((prev) => !prev)}
+            >
+              <p>Refresh Rate</p>
+              <p>
+                <FaPlus
+                  className={`transform inline-block ${
+                    isRefreshRateAccordionOpen ? "rotate-135" : "rotate-0"
+                  } transition-transform duration-300`}
+                />
+              </p>
+            </div>
+
+            <div
+              className={`overflow-hidden transition-max-height space-y-1 ${
+                isRefreshRateAccordionOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              {refreshRateOptions.map((refreshRate, idx) => (
+                <div key={idx}>
+                  <label className="flex items-center gap-2 text-lg">
+                    <input
+                      type="checkbox"
+                      id={refreshRate.value}
+                      value={refreshRate.value}
+                      className="checkbox checkbox-xs"
+                      checked={selectedRefreshRate?.value === refreshRate.value}
+                      onChange={() => handleRefreshRateChange(refreshRate)}
+                    />
+                    <span>{refreshRate.label}</span>
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* filter by Peak Brightness */}
+
+          <div>
+            <div
+              className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+              onClick={() => setIsPeakBrightnessAccordionOpen((prev) => !prev)}
+            >
+              <p>Peak Brightness</p>
+              <p>
+                <FaPlus
+                  className={`transform inline-block ${
+                    isPeakBrightnessAccordionOpen ? "rotate-135" : "rotate-0"
+                  } transition-transform duration-300`}
+                />
+              </p>
+            </div>
+
+            <div
+              className={`overflow-hidden transition-max-height space-y-1 ${
+                isPeakBrightnessAccordionOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              {peakBrightnessOptions.map((peakBrightness, idx) => (
+                <div key={idx}>
+                  <label className="flex items-center gap-2 text-lg">
+                    <input
+                      type="checkbox"
+                      id={peakBrightness.value}
+                      value={peakBrightness.value}
+                      className="checkbox checkbox-xs"
+                      checked={
+                        selectedPeakBrightness?.value === peakBrightness.value
+                      }
+                      onChange={() =>
+                        handlePeakBrightnessChange(peakBrightness)
+                      }
+                    />
+                    <span>{peakBrightness.label}</span>
+                  </label>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* filter by Processor */}
