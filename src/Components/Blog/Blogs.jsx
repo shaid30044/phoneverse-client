@@ -211,12 +211,14 @@ const Blogs = () => {
                   <div className="flex items-center gap-5">
                     <p className="flex items-center gap-1 text-black/70">
                       <span>
-                        <FaRegHeart />
+                        <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
+                          <FaRegHeart />
+                        </button>
                       </span>
                       {blog.views}k
                     </p>
 
-                    <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out hover:scale-125 px-0">
+                    <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
                       <MdOutlineBookmarks />
                     </button>
                   </div>

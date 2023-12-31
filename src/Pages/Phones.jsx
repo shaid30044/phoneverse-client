@@ -12,7 +12,7 @@ const Phones = () => {
 
       <Navbar />
 
-      <div className="bg-past px-4 md:px-10 lg:px-20 py-6">
+      <div className="bg-past px-2 md:px-10 lg:px-20 py-6">
         <Filter />
       </div>
 

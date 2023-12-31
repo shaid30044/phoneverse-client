@@ -1,25 +1,30 @@
 import { MdArrowForwardIos } from "react-icons/md";
 import { FaRegHeart /*FaHeart*/ } from "react-icons/fa6";
+import { IoGitCompareOutline /*IoGitCompare*/ } from "react-icons/io5";
 import { RiShoppingCart2Line /*RiShoppingCart2Fill*/ } from "react-icons/ri";
 
 const AllPhones = ({ phone }) => {
   return (
-    <div className="group">
+    <div>
       <div className="relative bg-past">
-        <div className="relative overflow-hidden flex justify-center items-center bg-cover bg-no-repeat h-48 group-hover:-ml-[15%] sm:group-hover:-ml-[15%] lg:group-hover:-ml-[15%] group-hover:scale-105 sm:group-hover:scale-75 lg:group-hover:scale-105 duration-500 p-4">
+        <div className="relative overflow-hidden flex justify-center items-center bg-cover bg-no-repeat h-48 px-4 pt-4 pb-2">
           <img src={phone.image[0]} className="h-40" />
         </div>
 
-        <div className="absolute top-1/2 -translate-y-1/2 right-1 group-hover:right-6 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 duration-500 gap-2">
-          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+        <div className="flex justify-around items-center pb-1">
+          <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
             <FaRegHeart />
           </button>
 
-          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+          <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
             <RiShoppingCart2Line />
           </button>
 
-          <button className="btn btn-sm text-[17px] text-black hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none transition duration-500 ease-in-out scale-50 group-hover:scale-100 px-0">
+          <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
+            <IoGitCompareOutline />
+          </button>
+
+          <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
             <MdArrowForwardIos />
           </button>
         </div>
@@ -65,7 +70,7 @@ const AllPhones = ({ phone }) => {
             {phone.battery.capacity}mAH
           </p>
 
-          <div className="flex justify-between items-center pr-1 pb-2">
+          <div>
             <p className="text-black">
               <span className="font-medium">Price: </span>${phone.price}
             </p>
