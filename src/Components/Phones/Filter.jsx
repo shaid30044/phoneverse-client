@@ -397,6 +397,50 @@ const Filter = () => {
         >
           <div className="bg-white p-4">
             <div>
+              {/* filter by price */}
+
+              <div>
+                <div
+                  className="flex justify-between items-center border-b-[3px] text-xl border-past pt-4 pb-1 mb-2 cursor-pointer"
+                  onClick={() => setIsPriceAccordionOpen((prev) => !prev)}
+                >
+                  <p>Price</p>
+                  <p>
+                    <FaPlus
+                      className={`transform inline-block ${
+                        isPriceAccordionOpen ? "rotate-135" : "rotate-0"
+                      } transition-transform duration-300`}
+                    />
+                  </p>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-max-height space-y-1 ${
+                    isPriceAccordionOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  <form className="flex flex-row justify-between items-center gap-2 py-2">
+                    <input
+                      type="text"
+                      name="min"
+                      value={minPrice}
+                      onChange={(e) => setMinPrice(e.target.value)}
+                      className="text-center border-2 border-black/40 focus:outline-none w-20 px-2 py-1"
+                    />
+
+                    <p>to</p>
+
+                    <input
+                      type="text"
+                      name="max"
+                      value={maxPrice || ""}
+                      onChange={(e) => setMaxPrice(e.target.value)}
+                      className="text-center border-2 border-black/40 focus:outline-none w-20 px-2 py-1"
+                    />
+                  </form>
+                </div>
+              </div>
+
               {/* filter by refresh rate */}
 
               <div>
