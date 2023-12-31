@@ -3,20 +3,24 @@ import Navbar from "../Shared/NavBar/Navbar";
 import Footer from "../Shared/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
 
-const ReadMore = () => {
-  const blog = useLoaderData();
+const Phone = () => {
+  const phone = useLoaderData();
+
+  console.log(phone);
 
   return (
     <div>
       <Helmet>
-        <title>Phone Verse</title>
+        <title>Phone Verse | </title>
       </Helmet>
 
       <Navbar />
-      <div>{blog.title}</div>
+
+      <div></div>
+
       <Footer />
     </div>
   );
 };
 
-export default ReadMore;
+export default Phone;

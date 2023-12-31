@@ -2,6 +2,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { FaRegHeart /*FaHeart*/ } from "react-icons/fa6";
 import { IoGitCompareOutline /*IoGitCompare*/ } from "react-icons/io5";
 import { RiShoppingCart2Line /*RiShoppingCart2Fill*/ } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const AllPhones = ({ phone }) => {
   return (
@@ -24,9 +25,11 @@ const AllPhones = ({ phone }) => {
             <IoGitCompareOutline />
           </button>
 
-          <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
-            <MdArrowForwardIos />
-          </button>
+          <Link to={`/phones/${phone.name}`}>
+            <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
+              <MdArrowForwardIos />
+            </button>
+          </Link>
         </div>
       </div>
 

@@ -7,6 +7,7 @@ import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
 import Blog from "../Pages/Blog";
 import ReadMore from "../Pages/ReadMore";
+import Phone from "../Pages/Phone";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
         element: <Phones />,
       },
       {
+        path: "/phones/:id",
+        element: <Phone />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5173/phones/${params.id}`),
+      },
+      {
         path: "/blogs",
         element: <Blog />,
       },
@@ -30,7 +37,7 @@ const router = createBrowserRouter([
         path: "/blog/:id",
         element: <ReadMore />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5173/blog/${params.id}`),
+          fetch(`https://phone-verse-server.vercel.app/blog/${params.id}`),
       },
       {
         path: "/signIn",

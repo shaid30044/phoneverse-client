@@ -1,12 +1,11 @@
 [
   {
-    "blogId": 1,
     "title": "The Evolution of Smartphone Technology",
     "date": "February 15, 2023",
     "category": "Technology",
     "tags": ["Smartphones", "Technology", "Innovation"],
     "image": "https://i.ibb.co/B2pStkY/blog1.jpg",
-    "views": 1,
+    "views": 923,
     "content": {
       "introduction": "As we traverse through the fast-paced realms of technology, the evolution of smartphones remains a captivating journey. From the humble beginnings of mobile communication to the present era of pocket-sized supercomputers, the progression has been nothing short of remarkable.",
       "body": "With each passing year, smartphones have become more than just devices for calls and texts. They are now powerful tools that redefine our daily lives. The integration of cutting-edge features such as AI, high-resolution cameras, and lightning-fast processors has turned these gadgets into indispensable companions. The constant innovation from various manufacturers has fueled a competitive landscape, driving the industry to new heights.",
@@ -15,13 +14,12 @@
   },
 
   {
-    "blogId": 2,
     "title": "Choosing the Perfect Smartphone for Your Lifestyle",
     "date": "March 10, 2023",
     "category": "Buying Guide",
     "tags": ["Smartphones", "Buying Guide", "Lifestyle"],
     "image": "https://i.ibb.co/wyb1t3x/blog2.jpg",
-    "views": 3.2,
+    "views": 3232,
     "content": {
       "introduction": "Selecting a smartphone that aligns with your lifestyle can be a daunting task given the plethora of options available in the market. Whether you are a photography enthusiast, a gaming aficionado, or a professional on the go, finding the perfect match involves considering various factors.",
       "body": "Photography enthusiasts may prioritize cameras with high megapixel counts, while gamers might seek devices with powerful processors and immersive displays. For professionals, features like robust security, productivity apps, and long battery life are crucial. Exploring the diverse range of smartphones tailored to different needs ensures that you make a well-informed decision.",
@@ -30,13 +28,12 @@
   },
 
   {
-    "blogId": 3,
     "title": "The Rise of 5G Technology",
     "date": "April 5, 2023",
     "category": "Technology",
     "tags": ["5G", "Technology", "Connectivity"],
     "image": "https://i.ibb.co/WVq3nCy/blog3.jpg",
-    "views": 2.5,
+    "views": 2535,
     "content": {
       "introduction": "As the world becomes increasingly interconnected, the advent of 5G technology marks a significant milestone in the realm of connectivity. The fifth generation of wireless networks promises unprecedented speed, low latency, and a multitude of possibilities that can reshape the way we communicate and interact with technology.",
       "body": "With 5G, downloading large files and streaming high-definition content become almost instantaneous, paving the way for advancements in augmented reality, virtual reality, and the Internet of Things. As more cities around the globe embrace this transformative technology, we can anticipate a new era of innovation and connectivity.",
@@ -45,13 +42,12 @@
   },
 
   {
-    "blogId": 4,
     "title": "Exploring the World of Smartphone Photography",
     "date": "May 20, 2023",
     "category": "Photography",
     "tags": ["Photography", "Smartphones", "Camera"],
     "image": "https://i.ibb.co/5LH3wVM/blog4.jpg",
-    "views": 1.8,
+    "views": 628,
     "content": {
       "introduction": "Gone are the days when smartphones were merely communication devices. Today, they double as powerful cameras, capable of capturing stunning moments with ease. Join us as we delve into the fascinating world of smartphone photography and the technological innovations that have transformed it.",
       "body": "Advancements in camera sensors, image processing algorithms, and the integration of multiple lenses have elevated smartphone photography to new heights. Features like Night Mode, AI enhancements, and Pro modes empower users to express their creativity and capture breathtaking shots in various conditions.",
@@ -60,13 +56,12 @@
   },
 
   {
-    "blogId": 5,
     "title": "Navigating the Features of Foldable Smartphones",
     "date": "June 15, 2023",
     "category": "Technology",
     "tags": ["Foldable Phones", "Technology", "Innovation"],
     "image": "https://i.ibb.co/wKW1mFc/blog5.png",
-    "views": 2.9,
+    "views": 2329,
     "content": {
       "introduction": "Foldable smartphones represent a groundbreaking leap in mobile device design. With flexible screens and innovative form factors, these devices offer a unique blend of portability and functionality. Join us as we navigate through the features and possibilities of foldable smartphones.",
       "body": "The ability to unfold a smartphone into a larger display opens up new opportunities for multitasking, immersive gaming, and enhanced productivity. Foldable phones are not just a technological marvel; they cater to users who seek a versatile device that can adapt to different scenarios and usage patterns.",
@@ -75,13 +70,12 @@
   },
 
   {
-    "blogId": 6,
     "title": "Tips for Extending Your Smartphone Battery Life",
     "date": "July 10, 2023",
     "category": "Tips",
     "tags": ["Smartphones", "Battery Life", "Tips"],
     "image": "https://i.ibb.co/Qcq9MtS/blog6.jpg",
-    "views": 2.2,
+    "views": 2742,
     "content": {
       "introduction": "In the age of constant connectivity, preserving smartphone battery life is a common concern for users. Discover practical tips and strategies to extend the battery life of your device, ensuring that it stays powered throughout your busy day.",
       "body": "Simple habits like adjusting screen brightness, managing background apps, and optimizing power settings can significantly impact your smartphone's battery longevity. Additionally, using battery-saving modes, limiting location services, and avoiding excessive multitasking can contribute to a longer-lasting charge.",
@@ -90,13 +84,12 @@
   },
 
   {
-    "blogId": 7,
     "title": "The Impact of Augmented Reality in Smartphones",
     "date": "August 25, 2023",
     "category": "Technology",
     "tags": ["Augmented Reality", "Smartphones", "Technology"],
     "image": "https://i.ibb.co/VLDHTWL/blog7.jpg",
-    "views": 3.8,
+    "views": 3468,
     "content": {
       "introduction": "Augmented Reality (AR) has transcended the realm of science fiction and found a home in our smartphones. Join us as we explore the transformative impact of AR technology on the way we interact with our devices and the world around us.",
       "body": "AR apps and features enhance our daily experiences by overlaying digital information onto the physical world. From gaming and navigation to interior design and education, smartphones equipped with AR capabilities open up a world of possibilities. As AR technology continues to evolve, we can anticipate even more immersive and practical applications.",
@@ -105,13 +98,12 @@
   },
 
   {
-    "blogId": 8,
     "title": "Securing Your Smartphone: A Guide to Mobile Security",
     "date": "September 18, 2023",
     "category": "Security",
     "tags": ["Smartphones", "Security", "Privacy"],
     "image": "https://i.ibb.co/cNWzYzF/blog8.jpg",
-    "views": 2.1,
+    "views": 2421,
     "content": {
       "introduction": "As our smartphones become repositories of personal and sensitive information, ensuring their security is paramount. Join us in this comprehensive guide on mobile security, covering tips, best practices, and the latest technologies to safeguard your digital life.",
       "body": "Implementing strong passcodes, enabling biometric authentication, and keeping software up to date are fundamental steps in securing your smartphone. Additionally, exploring features like remote tracking and data encryption adds an extra layer of protection against potential threats. Stay informed about the latest security updates and be proactive in maintaining a secure mobile environment.",
@@ -120,13 +112,12 @@
   },
 
   {
-    "blogId": 9,
     "title": "The Future of Smartphone Displays: Exploring OLED Technology",
     "date": "October 12, 2023",
     "category": "Display Technology",
     "tags": ["Smartphones", "Display Technology", "OLED"],
     "image": "https://i.ibb.co/9TJ8JSx/blog9.jpg",
-    "views": 3.5,
+    "views": 3955,
     "content": {
       "introduction": "The evolution of smartphone displays has been a captivating journey, and OLED (Organic Light-Emitting Diode) technology has played a pivotal role in shaping the visual experiences on our devices. Join us as we delve into the world of OLED displays and explore the advancements that are shaping the future of smartphone visuals.",
       "body": "OLED displays offer vibrant colors, high contrast ratios, and the ability to achieve true black levels by individually controlling each pixel. The flexibility of OLED panels has also enabled manufacturers to experiment with foldable and curved displays, pushing the boundaries of design and user experience. As OLED technology continues to mature, we can anticipate even more stunning and innovative displays in upcoming smartphones.",
@@ -135,13 +126,12 @@
   },
 
   {
-    "blogId": 10,
     "title": "Unleashing the Power of Artificial Intelligence in Smartphones",
     "date": "November 8, 2023",
     "category": "Artificial Intelligence",
     "tags": ["Artificial Intelligence", "Smartphones", "Innovation"],
     "image": "https://i.ibb.co/Pgq2ShY/blog10.png",
-    "views": 2.7,
+    "views": 2547,
     "content": {
       "introduction": "Artificial Intelligence (AI) has become a driving force behind the capabilities of modern smartphones, transforming how we interact with our devices. Join us as we explore the integration of AI in smartphones and the myriad ways it enhances functionality, personalization, and overall user experience.",
       "body": "AI algorithms power features like facial recognition, voice assistants, and predictive text, making smartphones more intuitive and user-friendly. The ability of AI to learn user preferences and adapt to individual behavior contributes to a personalized and efficient interaction. As AI technology evolves, we can expect even more sophisticated applications that redefine the possibilities of smartphone functionality.",
@@ -149,13 +139,12 @@
     }
   },
   {
-    "blogId": 11,
     "title": "The Green Revolution: Sustainable Practices in Smartphone Manufacturing",
     "date": "December 01, 2023",
     "category": "Sustainable",
     "tags": ["Smartphones", "Sustainability", "Technology"],
     "image": "https://i.ibb.co/zGc5tKp/blog11.png",
-    "views": 2.5,
+    "views": 2745,
     "content": {
       "introduction": "In an era where environmental consciousness is paramount, the smartphone industry is making strides toward sustainability. Join us as we explore the green revolution in smartphone manufacturing, examining eco-friendly practices, recyclable materials, and the industry's commitment to reducing its environmental footprint.",
       "body": "Manufacturers are increasingly adopting sustainable sourcing of materials, reducing e-waste through recycling programs, and implementing energy-efficient production processes. From modular designs that facilitate easy repairs to initiatives focused on extending the lifespan of devices, the smartphone industry is embracing a more environmentally responsible approach.",
@@ -163,13 +152,12 @@
     }
   },
   {
-    "blogId": 12,
     "title": "Gaming on the Go: The Revolution of Mobile Gaming",
     "date": "January 18, 2023",
     "category": "Mobile Gaming",
     "tags": ["Mobile Gaming", "Smartphones", "Gaming Trends"],
     "image": "https://i.ibb.co/S3gWKzG/blog12.jpg",
-    "views": 1.8,
+    "views": 1248,
     "content": {
       "introduction": "The gaming landscape has undergone a revolutionary transformation with the rise of mobile gaming. Join us as we explore the evolution of mobile gaming, the impact of powerful smartphone hardware, and the diverse array of gaming experiences available at your fingertips.",
       "body": "Smartphones with high-performance processors, advanced graphics capabilities, and responsive touchscreens have turned gaming on the go into a mainstream phenomenon. From casual games to graphically intensive titles, the mobile gaming industry continues to push boundaries, offering immersive experiences that rival traditional gaming platforms.",
@@ -177,13 +165,12 @@
     }
   },
   {
-    "blogId": 13,
     "title": "The Art of Smartphone Customization: Personalizing Your Device",
     "date": "February 12, 2023",
     "category": "Customization",
     "tags": ["Smartphones", "Customization", "User Experience"],
     "image": "https://i.ibb.co/SQHN4Mh/blog13.jpg",
-    "views": 2.2,
+    "views": 2952,
     "content": {
       "introduction": "Your smartphone is a reflection of your personality, and customization plays a key role in making it uniquely yours. Join us as we explore the art of smartphone customization, from personalized wallpapers to custom app icons, and how it enhances the overall user experience.",
       "body": "Modern smartphones offer a myriad of customization options, allowing users to change themes, tweak settings, and even personalize the look and feel of their device with third-party apps. From unique ringtones to custom widgets, the possibilities for personalization are virtually limitless, providing users with a device that aligns with their individual style.",
@@ -191,13 +178,12 @@
     }
   },
   {
-    "blogId": 14,
     "title": "The Role of Smartphones in Remote Work: A Post-Pandemic Perspective",
     "date": "March 22, 2023",
     "category": "Remote Work",
     "tags": ["Smartphones", "Remote Work", "Technology"],
     "image": "https://i.ibb.co/6bk9qfB/blog14.png",
-    "views": 1,
+    "views": 1345,
     "content": {
       "introduction": "The global shift towards remote work has underscored the pivotal role that smartphones play in maintaining productivity and connectivity. Join us as we explore the impact of smartphones on remote work, examining the apps, features, and strategies that enable seamless collaboration and efficiency.",
       "body": "Smartphones have become indispensable tools for remote workers, facilitating communication through video calls, instant messaging, and collaborative apps. The ability to access documents, emails, and project management tools on the go ensures that professionals can stay connected and productive regardless of their physical location.",
@@ -205,13 +191,12 @@
     }
   },
   {
-    "blogId": 15,
     "title": "The Art of Smartphone Filmmaking: Creating Cinematic Moments on the Go",
     "date": "April 15, 2023",
     "category": "Filmmaking",
     "tags": ["Smartphones", "Filmmaking", "Mobile Photography"],
     "image": "https://i.ibb.co/0M0qyzJ/blog15.jpg",
-    "views": 3.2,
+    "views": 3852,
     "content": {
       "introduction": "Smartphones have democratized the world of filmmaking, empowering aspiring creators to capture and share cinematic moments on the go. Join us as we explore the art of smartphone filmmaking, from shooting techniques to editing apps, and how it has revolutionized the way we tell stories.",
       "body": "The advanced camera capabilities of modern smartphones, coupled with intuitive video editing apps, have transformed mobile devices into powerful filmmaking tools. From shooting high-quality 4K videos to experimenting with cinematic effects, smartphone filmmakers can unleash their creativity without the need for expensive equipment.",
@@ -219,13 +204,12 @@
     }
   },
   {
-    "blogId": 16,
     "title": "The Impact of 6G Technology on Smartphones",
     "date": "May 10, 2023",
     "category": "Technology",
     "tags": ["6G", "Technology", "Connectivity"],
     "image": "https://i.ibb.co/ZXNHTNH/blog16.jpg",
-    "views": 2.7,
+    "views": 2457,
     "content": {
       "introduction": "As we embrace the capabilities of 5G, the next frontier is already on the horizon – 6G technology. Join us as we explore the potential impact of 6G on smartphones, from lightning-fast data speeds to groundbreaking applications that could redefine our digital experiences.",
       "body": "Anticipated to be even faster and more efficient than its predecessor, 6G technology holds the promise of seamless connectivity, enabling new possibilities such as holographic communication, ultra-realistic augmented reality, and advanced artificial intelligence applications. The evolution of smartphones with 6G capabilities is set to revolutionize the way we interact with technology.",
@@ -233,13 +217,12 @@
     }
   },
   {
-    "blogId": 17,
     "title": "Impact of U.S. Restrictions on Huawei's Global Operations",
     "date": "January 20, 2023",
     "category": "Global Affairs",
     "tags": ["Huawei", "Restrictions", "Global Operations"],
     "image": "https://i.ibb.co/0c21pn4/blog17.png",
-    "views": 8.2,
+    "views": 8982,
     "content": {
       "introduction": "Huawei faces a significant setback as the impact of U.S. restrictions reverberates across its global operations, marking a challenging chapter in the company's history.",
       "body": "The restrictions, aimed at limiting Huawei's access to critical technologies and components, have led to disruptions in the supply chain, hampering the production of key devices and infrastructure. Additionally, the company is navigating geopolitical challenges that have strained international partnerships.",
@@ -247,13 +230,12 @@
     }
   },
   {
-    "blogId": 18,
     "title": "Mastering Smartphone Photography: Pro Tips for Stunning Shots",
     "date": "June 05, 2023",
     "category": "Photography",
     "tags": ["Photography", "Smartphones", "Photography Tips"],
     "image": "https://i.ibb.co/dc7N6QP/blog18.jpg",
-    "views": 1.5,
+    "views": 1855,
     "content": {
       "introduction": "Transform your smartphone into a powerful photography tool with our pro tips for capturing stunning shots. Join us as we explore techniques, settings, and creative ideas to elevate your smartphone photography skills and make every shot count.",
       "body": "From mastering composition and lighting to understanding the intricacies of manual mode, there are numerous ways to enhance your smartphone photography. We'll also explore the best apps for editing and post-processing, ensuring that your photos are not only captured beautifully but also polished to perfection.",
@@ -261,13 +243,12 @@
     }
   },
   {
-    "blogId": 19,
     "title": "The Evolution of Smartphone Design: Trends and Innovations",
     "date": "July 20, 2023",
     "category": "Design",
     "tags": ["Smartphones", "Design", "Innovation"],
     "image": "https://i.ibb.co/CV4fxkJ/blog19.jpg",
-    "views": 2.1,
+    "views": 2231,
     "content": {
       "introduction": "Smartphone design has come a long way since the early days of mobile devices. Join us on a journey through the evolution of smartphone design, exploring current trends, innovative features, and the factors shaping the aesthetics of the devices we carry with us every day.",
       "body": "From bezel-less displays and sleek form factors to the integration of foldable screens and durable materials, smartphone design continues to push the boundaries of innovation. We'll also delve into the influence of user experience on design choices and how manufacturers strive to create devices that seamlessly blend aesthetics with functionality.",
@@ -275,13 +256,12 @@
     }
   },
   {
-    "blogId": 20,
     "title": "Huawei's foray into AI: Transforming Industries with Intelligent Solutions",
     "date": "March 20, 2023",
     "category": "Technology",
     "tags": ["Huawei", "Artificial Intelligence", "Innovation"],
     "image": "https://i.ibb.co/hZ6Brsd/blog20.jpg",
-    "views": 2.7,
+    "views": 2847,
     "content": {
       "introduction": "In a bold leap into the realm of Artificial Intelligence (AI), Huawei is reshaping industries by deploying intelligent solutions that harness the power of machine learning and advanced algorithms. The company's focus on AI marks a new era of innovation, efficiency, and transformative capabilities.",
       "body": "Huawei's AI initiatives span across various sectors, from healthcare and finance to manufacturing and telecommunications. The integration of AI-driven technologies enhances decision-making processes, automates complex tasks, and unlocks new possibilities for businesses, fostering a more intelligent and connected world.",
@@ -295,13 +275,12 @@
     }
   },
   {
-    "blogId": 21,
     "title": "The Role of Smartphones in Health and Wellness",
     "date": "August 15, 2023",
     "category": "Health",
     "tags": ["Smartphones", "Health", "Wellness"],
     "image": "https://i.ibb.co/fHMyQFP/blog21.jpg",
-    "views": 2.9,
+    "views": 2239,
     "content": {
       "introduction": "Smartphones are increasingly becoming integral tools for managing our health and wellness. Join us as we explore the various ways smartphones contribute to our well-being, from fitness tracking and mental health apps to advancements in medical technology that leverage mobile devices for positive health outcomes.",
       "body": "Fitness apps, sleep trackers, and nutrition guides have turned smartphones into personal wellness assistants, helping users maintain a healthy lifestyle. We'll also discuss the role of emerging technologies, such as smartphone-connected medical devices and telehealth apps, in revolutionizing healthcare accessibility and delivery.",
@@ -309,13 +288,12 @@
     }
   },
   {
-    "blogId": 22,
     "title": "The Rise of Budget-Friendly Smartphones: Unveiling Hidden Gems",
     "date": "September 10, 2023",
     "category": "Budget-Friendly",
     "tags": ["Smartphones", "Budget-Friendly", "Technology"],
     "image": "https://i.ibb.co/hV5VPk8/blog22.jpg",
-    "views": 1.2,
+    "views": 4362,
     "content": {
       "introduction": "Quality smartphones no longer come with a hefty price tag. Join us as we explore the rise of budget-friendly smartphones, unveiling hidden gems that offer impressive features, performance, and value for users on a budget without compromising on quality.",
       "body": "Budget-friendly smartphones have become increasingly sophisticated, featuring high-resolution displays, capable cameras, and reliable performance. We'll delve into the market's hidden gems, highlighting devices that provide a premium experience at an affordable price, catering to a wide range of users.",

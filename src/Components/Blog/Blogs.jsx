@@ -215,7 +215,11 @@ const Blogs = () => {
                           <FaRegHeart />
                         </button>
                       </span>
-                      {blog.views}k
+                      {blog.views >= 1000 ? (
+                        <span>{(blog.views / 1000).toFixed(1)}k</span>
+                      ) : (
+                        <span>{blog.views}</span>
+                      )}
                     </p>
 
                     <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
