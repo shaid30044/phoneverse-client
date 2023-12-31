@@ -10,6 +10,7 @@ import {
 } from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
 import "./scrollbar.css";
+import Button from "../../Shared/Button/Button";
 
 const options = [
   { value: "default", label: "Default" },
@@ -294,6 +295,30 @@ const Filter = () => {
       includesSelectedBattery
     );
   });
+
+  // reset filter
+
+  const resetFilters = () => {
+    setSearchQuery("");
+    setSelectedPriceSort(options[0]);
+    setSelectedRefreshRate(refreshRateOptions[0]);
+    setIsRefreshRateAccordionOpen(false);
+    setSelectedPeakBrightness(peakBrightnessOptions[0]);
+    setIsPeakBrightnessAccordionOpen(false);
+    setSelectedProcessor(processorOptions[0]);
+    setIsProcessorAccordionOpen(false);
+    setSelectedOS(osOptions[0]);
+    setIsOSAccordionOpen(false);
+    setSelectedBrand("");
+    setIsMemoryAccordionOpen(false);
+    setSelectedMemory(memoryOptions[0]);
+    setIsStorageAccordionOpen(false);
+    setSelectedStorage(storageOptions[0]);
+    setIsBatteryAccordionOpen(false);
+    setSelectedBattery(storageOptions[0]);
+    setCurrentPage(1);
+    setItemsPerPage(pageOptions[1].value);
+  };
 
   // sort mobiles
 
@@ -640,6 +665,10 @@ const Filter = () => {
                   ))}
                 </div>
               </div>
+
+              <div onClick={resetFilters} className="grid pt-6">
+                <Button type={"Reset All"} />
+              </div>
             </div>
           </div>
         </Drawer>
@@ -949,6 +978,10 @@ const Filter = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div onClick={resetFilters} className="grid pt-6">
+            <Button type={"Reset All"} />
           </div>
         </div>
 
