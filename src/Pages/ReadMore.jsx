@@ -7,6 +7,7 @@ import {
   MdOutlineBookmarks,
   // MdBookmarks,
 } from "react-icons/md";
+import SimilarBlogs from "../Components/Blog/SimilarBlogs";
 
 const ReadMore = () => {
   const blog = useLoaderData();
@@ -19,7 +20,7 @@ const ReadMore = () => {
 
       <Navbar />
 
-      <div className="px-4 sm:px-10 md:px-20 xl:px-40 pb-20">
+      <div className="flex justify-between px-4 sm:px-10 md:px-20 xl:px-40 pb-20">
         <div className="sm:w-2/3">
           <div className="pb-4 lg:pb-4">
             <p className="text-xl font-medium mb-10">
@@ -32,11 +33,11 @@ const ReadMore = () => {
             </p>
 
             <div className="lg:px-6">
-              <h3 className="text-2xl font-semibold text-black/80 pb-1">
+              <h3 className="text-2xl font-semibold text-black/80">
                 {blog.title}
               </h3>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 pt-3 pb-2">
                 {blog.tags.map((tags) => (
                   <p
                     key={tags}
@@ -47,7 +48,7 @@ const ReadMore = () => {
                 ))}
               </div>
 
-              <p className="text-sm font-medium text-black/60 italic pt-1.5">
+              <p className="text-sm font-medium text-black/60 italic">
                 {blog.date}
               </p>
             </div>
@@ -78,6 +79,10 @@ const ReadMore = () => {
 
             <p>{blog.content.conclusion}</p>
           </div>
+        </div>
+
+        <div className="sm:w-1/3 pl-10 lg:pl-20">
+          <SimilarBlogs id={blog._id} category={blog.category} />
         </div>
       </div>
 
