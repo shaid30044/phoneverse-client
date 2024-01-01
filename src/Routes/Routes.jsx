@@ -34,10 +34,10 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "/blog/:id",
+        path: "/blogs/:id",
         element: <ReadMore />,
         loader: ({ params }) =>
-          fetch(`https://phone-verse-server.vercel.app/blog/${params.id}`),
+          fetch(`https://phone-verse-server.vercel.app/blogs/${params.id}`),
       },
       {
         path: "/signIn",

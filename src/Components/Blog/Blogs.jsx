@@ -209,22 +209,20 @@ const Blogs = () => {
                   <p className="text-black/70">{blog.date}</p>
 
                   <div className="flex items-center gap-5">
-                    <p className="flex items-center gap-1 text-black/70">
-                      <span>
-                        <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
-                          <FaRegHeart />
-                        </button>
-                      </span>
+                    <div className="flex items-center gap-1 text-black/70">
+                      <p className="hover:text-primary duration-500 cursor-pointer">
+                        <FaRegHeart />
+                      </p>
                       {blog.views >= 1000 ? (
                         <span>{(blog.views / 1000).toFixed(1)}k</span>
                       ) : (
                         <span>{blog.views}</span>
                       )}
-                    </p>
+                    </div>
 
-                    <button className="btn btn-sm text-base text-black/70 hover:text-primary rounded-none bg-transparent hover:bg-transparent border-none shadow-none duration-500 px-0">
+                    <p className="hover:text-primary duration-500 cursor-pointer">
                       <MdOutlineBookmarks />
-                    </button>
+                    </p>
                   </div>
                 </div>
 
@@ -233,7 +231,7 @@ const Blogs = () => {
                   <span className="pr-1">
                     {blog.content.introduction.slice(0, 150)}...
                   </span>
-                  <Link to={`/blog/${blog._id}`}>
+                  <Link to={`/blogs/${blog._id}`}>
                     <span className="font-medium text-primary duration-300">
                       Read more
                     </span>
