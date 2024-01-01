@@ -27,7 +27,7 @@ const ReadMore = () => {
 
       <Navbar />
 
-      <div className="flex justify-between px-4 sm:px-10 md:px-20 xl:px-40 pt-10 pb-20">
+      <div className="flex flex-col sm:flex-row justify-between px-4 sm:px-10 md:px-20 xl:px-40 pt-10 pb-20">
         <div className="sm:w-2/3">
           <div className="pb-4 lg:pb-4">
             <p className="text-xl font-medium mb-10">
@@ -93,7 +93,7 @@ const ReadMore = () => {
           </div>
         </div>
 
-        <div className="hidden sm:block sm:w-1/3 space-y-20 pl-6 lg:pl-20">
+        <div className="sm:w-1/3 space-y-20 pt-20 sm:pt-0 sm:pl-6 lg:pl-20">
           {similarBlogs.length ? (
             <SimilarBlogs id={blog._id} category={blog.category} />
           ) : (
