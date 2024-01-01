@@ -93,7 +93,7 @@ const ReadMore = () => {
           </div>
         </div>
 
-        <div className="sm:w-1/3 space-y-20 pt-20 sm:pt-0 sm:pl-6 lg:pl-20">
+        <div className="sm:w-1/3 space-y-10 sm:space-y-20 pt-20 sm:pt-0 sm:pl-6 lg:pl-20">
           {similarBlogs.length ? (
             <SimilarBlogs id={blog._id} category={blog.category} />
           ) : (
