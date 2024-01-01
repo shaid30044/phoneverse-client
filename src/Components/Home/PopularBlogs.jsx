@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import Title from "../../Shared/Title";
 
 const PopularBlogs = () => {
   const [blogs] = useBlogs();
@@ -30,6 +31,8 @@ const PopularBlogs = () => {
 
   return (
     <div className="px-2 sm:px-10 xl:px-20 py-20">
+      <Title title={"Popular Blogs"} />
+
       <div className="md:hidden">
         <Swiper
           slidesPerView={1.5}

@@ -8,6 +8,7 @@ import { FreeMode, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import Title from "../../Shared/Title";
 
 const OtherBlogs = ({ category }) => {
   const [blogs] = useBlogs();
@@ -16,11 +17,7 @@ const OtherBlogs = ({ category }) => {
 
   return (
     <div>
-      <h3 className="border-b-[3px] border-black/20 pb-1">
-        <span className="text-2xl font-medium text-primary border-b-[3px] border-primary pb-1">
-          Other Blogs
-        </span>
-      </h3>
+      <Title title={"Other Blogs"} />
 
       <div className="example hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
         {otherBlogs.map((other, idx) => (
