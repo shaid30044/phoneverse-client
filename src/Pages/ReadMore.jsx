@@ -8,9 +8,16 @@ import {
   // MdBookmarks,
 } from "react-icons/md";
 import SimilarBlogs from "../Components/Blog/SimilarBlogs";
+import OtherBlogs from "../Components/Blog/OtherBlogs";
+import useBlogs from "../Hooks/useBlogs";
 
 const ReadMore = () => {
   const blog = useLoaderData();
+  const [blogs] = useBlogs();
+
+  const similarBlogs = blogs.filter(
+    (b) => b.category === blog.category && b._id !== blog._id
+  );
 
   return (
     <div>
@@ -20,15 +27,12 @@ const ReadMore = () => {
 
       <Navbar />
 
-      <div className="flex justify-between px-4 sm:px-10 md:px-20 xl:px-40 pb-20">
+      <div className="flex justify-between px-4 sm:px-10 md:px-20 xl:px-40 pt-10 pb-20">
         <div className="sm:w-2/3">
           <div className="pb-4 lg:pb-4">
             <p className="text-xl font-medium mb-10">
               <span className="border-b-2 border-primary pb-1">
-                Category:{" "}
-                <span className="font-normal text-primary">
-                  {blog.category}
-                </span>
+                Category: <span className="text-primary">{blog.category}</span>
               </span>
             </p>
 
@@ -81,8 +85,14 @@ const ReadMore = () => {
           </div>
         </div>
 
-        <div className="sm:w-1/3 pl-10 lg:pl-20">
-          <SimilarBlogs id={blog._id} category={blog.category} />
+        <div className="hidden sm:block sm:w-1/3 space-y-20 pl-6 lg:pl-20">
+          {similarBlogs.length ? (
+            <SimilarBlogs id={blog._id} category={blog.category} />
+          ) : (
+            ""
+          )}
+
+          <OtherBlogs category={blog.category} />
         </div>
       </div>
 

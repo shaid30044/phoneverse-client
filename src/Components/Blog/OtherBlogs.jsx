@@ -3,18 +3,16 @@ import useBlogs from "../../Hooks/useBlogs";
 import { MdOutlineBookmarks } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const SimilarBlogs = ({ id, category }) => {
+const OtherBlogs = ({ category }) => {
   const [blogs] = useBlogs();
 
-  const similarBlogs = blogs.filter(
-    (similar) => similar.category === category && similar._id !== id
-  );
+  const similarBlogs = blogs.filter((similar) => similar.category !== category);
 
   return (
     <div>
       <h3 className="border-b-[3px] border-black/20 pb-1">
         <span className="text-2xl font-medium text-primary border-b-[3px] border-primary pb-1">
-          Related Blogs
+          Other Blogs
         </span>
       </h3>
 
@@ -60,4 +58,4 @@ const SimilarBlogs = ({ id, category }) => {
   );
 };
 
-export default SimilarBlogs;
+export default OtherBlogs;
