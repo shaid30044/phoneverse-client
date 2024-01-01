@@ -52,9 +52,17 @@ const ReadMore = () => {
                 ))}
               </div>
 
-              <p className="text-sm font-medium text-black/60 italic">
-                {blog.date}
-              </p>
+              <div className="flex items-center gap-2 text-sm font-medium text-black/60">
+                <p>{blog.date}</p>
+
+                <p>|</p>
+
+                <p className="flex items-center gap-1">
+                  <FaRegHeart />
+
+                  <p>{blog.views}</p>
+                </p>
+              </div>
             </div>
           </div>
 

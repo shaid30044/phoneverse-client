@@ -18,14 +18,14 @@ const SimilarBlogs = ({ id, category }) => {
         </span>
       </h3>
 
-      <div className="example flex flex-col gap-8 overflow-y-scroll max-h-[80vh] mt-6">
+      <div className="example flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
         {similarBlogs.map((similar, idx) => (
           <div key={idx}>
             <img src={similar.image} alt={similar.title} className="w-full" />
 
             <div className="mt-1 px-1">
               <div className="flex justify-between items-center text-xs lg:text-sm">
-                <p className="italic">{similar.date}</p>
+                <p>{similar.date}</p>
 
                 <div className="flex items-center gap-2 lg:gap-4">
                   <div className="flex items-center gap-1">

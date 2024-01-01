@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const OtherBlogs = ({ category }) => {
   const [blogs] = useBlogs();
 
-  const similarBlogs = blogs.filter((similar) => similar.category !== category);
+  const otherBlogs = blogs.filter((other) => other.category !== category);
 
   return (
     <div>
@@ -16,14 +16,14 @@ const OtherBlogs = ({ category }) => {
         </span>
       </h3>
 
-      <div className="example flex flex-col gap-8 overflow-y-scroll max-h-[80vh] mt-6">
-        {similarBlogs.map((similar, idx) => (
+      <div className="example flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
+        {otherBlogs.map((other, idx) => (
           <div key={idx}>
-            <img src={similar.image} alt={similar.title} className="w-full" />
+            <img src={other.image} alt={other.title} className="w-full" />
 
             <div className="mt-1 px-1">
               <div className="flex justify-between items-center text-xs lg:text-sm">
-                <p className="italic">{similar.date}</p>
+                <p>{other.date}</p>
 
                 <div className="flex items-center gap-2 lg:gap-4">
                   <div className="flex items-center gap-1">
@@ -31,10 +31,10 @@ const OtherBlogs = ({ category }) => {
                       <FaRegHeart />
                     </p>
                     <span>
-                      {similar.views >= 1000 ? (
-                        <span>{(similar.views / 1000).toFixed(1)}k</span>
+                      {other.views >= 1000 ? (
+                        <span>{(other.views / 1000).toFixed(1)}k</span>
                       ) : (
-                        <span>{similar.views}</span>
+                        <span>{other.views}</span>
                       )}
                     </span>
                   </div>
@@ -45,9 +45,9 @@ const OtherBlogs = ({ category }) => {
                 </div>
               </div>
 
-              <Link to={`/blogs/${similar._id}`}>
+              <Link to={`/blogs/${other._id}`}>
                 <span className="lg:text-lg font-medium hover:text-primary duration-300">
-                  {similar.title}
+                  {other.title}
                 </span>
               </Link>
             </div>
