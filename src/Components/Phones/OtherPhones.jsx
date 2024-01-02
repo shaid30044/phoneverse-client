@@ -57,9 +57,11 @@ const OtherPhones = ({ brand }) => {
         >
           {otherPhones.map((other, idx) => (
             <SwiperSlide key={idx} className="mb-10">
-              <img src={other.image} alt={other.name} className="w-full" />
+              <div className="h-44">
+                <img src={other.image} alt={other.name} className="max-h-44" />
+              </div>
 
-              <div className="mt-1 px-1">
+              <div className="mt-2 px-1">
                 <p className="text-sm">${other.price}</p>
 
                 <Link to={`/phone/${other._id}`}>

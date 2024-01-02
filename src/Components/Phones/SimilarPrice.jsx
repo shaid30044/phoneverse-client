@@ -62,9 +62,15 @@ const SimilarPrice = ({ id, price }) => {
         >
           {similarPrice.map((similar, idx) => (
             <SwiperSlide key={idx} className="mb-10">
-              <img src={similar.image} alt={similar.name} className="w-full" />
+              <div className="h-44">
+                <img
+                  src={similar.image}
+                  alt={similar.name}
+                  className="max-h-44"
+                />
+              </div>
 
-              <div className="mt-1 px-1">
+              <div className="mt-2 px-1">
                 <p className="text-sm">${similar.price}</p>
 
                 <Link to={`/phone/${similar._id}`}>

@@ -60,7 +60,7 @@ const ReadMore = () => {
                 <p className="flex items-center gap-1">
                   <FaRegHeart />
 
-                  <p>{blog.views}</p>
+                  <span>{blog.views}</span>
                 </p>
               </div>
             </div>
