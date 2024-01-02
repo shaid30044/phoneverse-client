@@ -110,7 +110,9 @@ const Footer = () => {
             {pages.map(({ page, path }) => (
               <span key={page}>
                 <li>
-                  <Link to={path}>{page}</Link>
+                  <Link to={path} className="navEffect">
+                    {page}
+                  </Link>
                 </li>
               </span>
             ))}
@@ -126,7 +128,9 @@ const Footer = () => {
             {legals.map(({ page, path }) => (
               <span key={page}>
                 <li>
-                  <Link to={path}>{page}</Link>
+                  <Link to={path} className="navEffect">
+                    {page}
+                  </Link>
                 </li>
               </span>
             ))}

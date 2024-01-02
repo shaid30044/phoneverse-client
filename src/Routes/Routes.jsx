@@ -24,17 +24,17 @@ const router = createBrowserRouter([
         element: <Phones />,
       },
       {
-        path: "/phones/:id",
+        path: "/phone/:id",
         element: <Phone />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5173/phones/${params.id}`),
+          fetch(`https://phone-verse-server.vercel.app/phones/${params.id}`),
       },
       {
         path: "/blogs",
         element: <Blog />,
       },
       {
-        path: "/blogs/:id",
+        path: "/blog/:id",
         element: <ReadMore />,
         loader: ({ params }) =>
           fetch(`https://phone-verse-server.vercel.app/blogs/${params.id}`),

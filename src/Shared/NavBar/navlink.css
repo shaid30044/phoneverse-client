@@ -1,10 +1,10 @@
-li {
+.navEffect {
   display: inline-block;
   text-decoration: none;
   color: black;
 }
 
-li:after {
+.navEffect:after {
   display: block;
   content: "";
   border-bottom: solid 2px #ee4037;
@@ -12,14 +12,14 @@ li:after {
   transition: transform 250ms ease-in-out;
 }
 
-li:hover:after {
+.navEffect:hover:after {
   transform: scaleX(1);
 }
 
-li.from-left:after {
+.navEffect.from-left:after {
   transform-origin: left;
 }
 
-li.from-right:after {
+.navEffect.from-right:after {
   transform-origin: right;
 }

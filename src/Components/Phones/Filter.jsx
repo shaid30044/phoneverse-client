@@ -1138,7 +1138,7 @@ const Filter = () => {
               </div>
             ) : (
               <div className="bg-white">
-                <div className="example grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
+                <div className="scrollbarHide grid sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
                   {currentMobiles.map((mobile, idx) => (
                     <div key={idx}>
                       <AllMobiles phone={mobile} />

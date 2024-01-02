@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="hidden col-span-2 sm:flex justify-center">
         <ul className="flex gap-10 text-lg">
           {pages.map(({ page, path }) => (
-            <li key={page}>
+            <li key={page} className="navEffect">
               <NavLink
                 to={path}
                 className={({ isActive }) =>
@@ -89,7 +89,7 @@ const Navbar = () => {
             <div className="bg-past p-4">
               <ul className="flex flex-col justify-center items-center gap-6 text-lg bg-white py-10">
                 {pages.map(({ page, path }) => (
-                  <li key={page}>
+                  <li key={page} className="navEffect">
                     <NavLink
                       to={path}
                       className={({ isActive }) =>

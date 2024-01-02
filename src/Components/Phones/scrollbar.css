@@ -1,8 +1,8 @@
-.example::-webkit-scrollbar {
+.scrollbarHide::-webkit-scrollbar {
   display: none;
 }
 
-.example {
+.scrollbarHide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }

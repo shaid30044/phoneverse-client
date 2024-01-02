@@ -21,7 +21,7 @@ const SimilarBlogs = ({ id, category }) => {
     <div>
       <Title title={"Related Blogs"} />
 
-      <div className="example hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
+      <div className="scrollbarHide hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
         {similarBlogs.map((similar, idx) => (
           <div key={idx}>
             <img src={similar.image} alt={similar.title} className="w-full" />

@@ -195,7 +195,7 @@ const Blogs = () => {
             <NotFound />
           </div>
         ) : (
-          <div className="example grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 md:gap-4 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
+          <div className="scrollbarHide grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 md:gap-4 bg-white h-screen overflow-x-hidden overflow-y-scroll px-4">
             {currentMobiles.map((blog, idx) => (
               <div key={idx}>
                 <div className="relative overflow-hidden flex justify-center items-center bg-past bg-cover bg-no-repeat">
@@ -231,7 +231,7 @@ const Blogs = () => {
                   <span className="pr-1">
                     {blog.content.introduction.slice(0, 150)}...
                   </span>
-                  <Link to={`/blogs/${blog._id}`}>
+                  <Link to={`/blog/${blog._id}`}>
                     <span className="font-medium text-primary duration-300">
                       Read more
                     </span>

@@ -19,7 +19,7 @@ const OtherBlogs = ({ category }) => {
     <div>
       <Title title={"Other Blogs"} />
 
-      <div className="example hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
+      <div className="scrollbarHide hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[90vh] mt-6">
         {otherBlogs.map((other, idx) => (
           <div key={idx}>
             <img src={other.image} alt={other.title} className="w-full" />
