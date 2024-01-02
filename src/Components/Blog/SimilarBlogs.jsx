@@ -4,11 +4,11 @@ import { MdOutlineBookmarks } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
+import Title from "../../Shared/Title";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import Title from "../../Shared/Title";
 
 const SimilarBlogs = ({ id, category }) => {
   const [blogs] = useBlogs();

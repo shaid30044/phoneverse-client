@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
+import Title from "../../Shared/Title";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import Title from "../../Shared/Title";
 
 const PopularBlogs = () => {
   const [blogs] = useBlogs();
