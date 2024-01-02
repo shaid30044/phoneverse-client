@@ -48,7 +48,7 @@ const OtherBlogs = ({ category }) => {
                 </div>
               </div>
 
-              <Link to={`/blogs/${other._id}`}>
+              <Link to={`/blog/${other._id}`}>
                 <span className="lg:text-lg font-medium hover:text-primary duration-300">
                   {other.title}
                 </span>
@@ -97,7 +97,7 @@ const OtherBlogs = ({ category }) => {
                   </div>
                 </div>
 
-                <Link to={`/blogs/${other._id}`}>
+                <Link to={`/blog/${other._id}`}>
                   <span className="lg:text-lg font-medium hover:text-primary duration-300">
                     {other.title}
                   </span>

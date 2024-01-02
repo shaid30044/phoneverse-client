@@ -8,38 +8,36 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-const SimilarPhones = ({ id, brand }) => {
+const OtherPhones = ({ brand }) => {
   const [phones] = usePhones();
 
-  const similarPhones = phones.filter(
-    (similar) => similar.brand === brand && similar._id !== id
-  );
+  const otherPhones = phones.filter((other) => other.brand !== brand);
 
   return (
     <div>
-      <Title title={"Related Phones"} />
+      <Title title={"Other Phones"} />
 
       <div className="scrollbarHide hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[70vh] mt-6">
-        {similarPhones.map((similar, idx) => (
+        {otherPhones.map((other, idx) => (
           <div key={idx} className="md:flex items-center gap-4">
             <img
-              src={similar.image}
-              alt={similar.name}
+              src={other.image}
+              alt={other.name}
               className="w-full md:w-1/3"
             />
 
             <div className="md:w-2/3 mt-1 px-1">
               <Link
-                to={`/phone/${similar._id}`}
+                to={`/phone/${other._id}`}
                 className="md:text-sm lg:text-lg font-medium"
               >
                 <span className="hover:text-primary duration-300">
-                  {similar.name}
+                  {other.name}
                 </span>
               </Link>
 
               <p className="text-sm lg:text-base">
-                Price: $<span>{similar.price}</span>
+                Price: $<span>{other.price}</span>
               </p>
             </div>
           </div>
@@ -57,16 +55,16 @@ const SimilarPhones = ({ id, brand }) => {
           modules={[FreeMode, Pagination]}
           className="mt-10"
         >
-          {similarPhones.map((similar, idx) => (
+          {otherPhones.map((other, idx) => (
             <SwiperSlide key={idx} className="mb-10">
-              <img src={similar.image} alt={similar.name} className="w-full" />
+              <img src={other.image} alt={other.name} className="w-full" />
 
               <div className="mt-1 px-1">
-                <p className="text-sm">${similar.price}</p>
+                <p className="text-sm">${other.price}</p>
 
-                <Link to={`/phone/${similar._id}`}>
+                <Link to={`/phone/${other._id}`}>
                   <span className="text-sm font-medium hover:text-primary duration-300">
-                    {similar.name}
+                    {other.name}
                   </span>
                 </Link>
               </div>
@@ -78,4 +76,4 @@ const SimilarPhones = ({ id, brand }) => {
   );
 };
 
-export default SimilarPhones;
+export default OtherPhones;

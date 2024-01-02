@@ -8,19 +8,22 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-const SimilarPhones = ({ id, brand }) => {
+const SimilarPrice = ({ id, price }) => {
   const [phones] = usePhones();
 
-  const similarPhones = phones.filter(
-    (similar) => similar.brand === brand && similar._id !== id
+  const similarPrice = phones.filter(
+    (similar) =>
+      similar.price >= price - 50 &&
+      similar.price <= price + 50 &&
+      similar._id !== id
   );
 
   return (
     <div>
-      <Title title={"Related Phones"} />
+      <Title title={"Similarly Priced"} />
 
       <div className="scrollbarHide hidden sm:flex flex-col gap-8 overflow-y-scroll max-h-[70vh] mt-6">
-        {similarPhones.map((similar, idx) => (
+        {similarPrice.map((similar, idx) => (
           <div key={idx} className="md:flex items-center gap-4">
             <img
               src={similar.image}
@@ -57,7 +60,7 @@ const SimilarPhones = ({ id, brand }) => {
           modules={[FreeMode, Pagination]}
           className="mt-10"
         >
-          {similarPhones.map((similar, idx) => (
+          {similarPrice.map((similar, idx) => (
             <SwiperSlide key={idx} className="mb-10">
               <img src={similar.image} alt={similar.name} className="w-full" />
 
@@ -78,4 +81,4 @@ const SimilarPhones = ({ id, brand }) => {
   );
 };
 
-export default SimilarPhones;
+export default SimilarPrice;

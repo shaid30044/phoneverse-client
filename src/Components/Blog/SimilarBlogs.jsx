@@ -50,7 +50,7 @@ const SimilarBlogs = ({ id, category }) => {
                 </div>
               </div>
 
-              <Link to={`/blogs/${similar._id}`}>
+              <Link to={`/blog/${similar._id}`}>
                 <span className="lg:text-lg font-medium hover:text-primary duration-300">
                   {similar.title}
                 </span>
@@ -99,7 +99,7 @@ const SimilarBlogs = ({ id, category }) => {
                   </div>
                 </div>
 
-                <Link to={`/blogs/${similar._id}`}>
+                <Link to={`/blog/${similar._id}`}>
                   <span className="lg:text-lg font-medium hover:text-primary duration-300">
                     {similar.title}
                   </span>

@@ -9,12 +9,21 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Title from "../Shared/Title";
 import usePhones from "../Hooks/usePhones";
 import SimilarPhones from "../Components/Phones/SimilarPhones";
+import OtherPhones from "../Components/Phones/OtherPhones";
+import SimilarPrice from "../Components/Phones/SimilarPrice";
 
 const Phone = () => {
   const phone = useLoaderData();
   const [phones] = usePhones();
 
-  const similarBlogs = phones.filter(
+  const similarPrice = phones.filter(
+    (similar) =>
+      similar.price >= phone.price - 50 &&
+      similar.price <= phone.price + 50 &&
+      similar._id !== phone._id
+  );
+
+  const similarPhones = phones.filter(
     (b) => b.category === phone.category && b._id !== phone._id
   );
 
@@ -419,11 +428,19 @@ const Phone = () => {
         </div>
 
         <div className="sm:w-1/3 space-y-10 sm:space-y-20 pt-20 sm:pt-0 sm:pl-6 lg:pl-20">
-          {similarBlogs.length ? (
+          {similarPrice.length ? (
+            <SimilarPrice id={phone._id} price={phone.price} />
+          ) : (
+            ""
+          )}
+
+          {similarPhones.length ? (
             <SimilarPhones id={phone._id} brand={phone.brand} />
           ) : (
             ""
           )}
+
+          <OtherPhones brand={phone.brand} />
         </div>
       </div>
 
