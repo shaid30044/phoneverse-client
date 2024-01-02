@@ -11,6 +11,7 @@ import {
 import { FaPlus } from "react-icons/fa6";
 import "./scrollbar.css";
 import Button from "../../Shared/Button/Button";
+import usePhones from "../../Hooks/usePhones";
 
 const options = [
   { value: "default", label: "Default" },
@@ -94,26 +95,18 @@ const batteryOptions = [
 ];
 
 const Filter = () => {
-  const [mobiles, setMobiles] = useState([]);
+  const [phones] = usePhones();
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(null);
   const [defaultMax, setDefaultMax] = useState("");
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("./phones.json");
-      const data = await res.json();
-      setMobiles(data);
+    const prices = phones.map((mobile) => mobile.price);
+    const max = Math.max(...prices);
 
-      const prices = data.map((mobile) => mobile.price);
-      const max = Math.max(...prices);
-
-      setMaxPrice(max);
-      setDefaultMax(max);
-    };
-
-    fetchData();
-  }, []);
+    setMaxPrice(max);
+    setDefaultMax(max);
+  }, [phones]);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedPriceSort, setSelectedPriceSort] = useState(options[0]);
@@ -217,7 +210,7 @@ const Filter = () => {
     setSelectedBattery(selectedOption);
   };
 
-  const filteredMobiles = mobiles.filter((mobile) => {
+  const filteredMobiles = phones.filter((mobile) => {
     // search functionality
 
     const includesSearchQuery = mobile.name
@@ -340,7 +333,7 @@ const Filter = () => {
     setItemsPerPage(pageOptions[1].value);
   };
 
-  // sort mobiles
+  // phones
 
   const sortedMobiles = [...filteredMobiles];
 
