@@ -4,6 +4,7 @@ import Footer from "../Shared/Footer/Footer";
 import BrandsLogo from "../Components/Home/BrandsLogo";
 import Slider from "../Components/Home/Slider";
 import PopularBlogs from "../Components/Home/PopularBlogs";
+import LatestPhones from "../Components/Home/LatestPhones";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
 
       <Navbar />
       <Slider />
+      <LatestPhones />
       <PopularBlogs />
       <BrandsLogo />
       <Footer />

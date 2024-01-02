@@ -330,10 +330,10 @@ const Phone = () => {
 
                 {/* under display */}
 
-                {phone.camera.rear?.under_display ? (
+                {phone.camera.front?.under_display ? (
                   <div className="flex sm:text-lg mt-1">
                     <p className="font-medium w-1/3">Under Display:</p>
-                    <p className="w-2/3">{phone.camera.rear?.under_display}</p>
+                    <p className="w-2/3">{phone.camera.front?.under_display}</p>
                   </div>
                 ) : (
                   ""
