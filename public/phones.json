@@ -424,7 +424,7 @@
       },
       "front": {
         "main": "10MP",
-        "under-display": "4MP"
+        "under_display": "4MP"
       }
     },
     "battery": {
@@ -495,7 +495,7 @@
       },
       "front": {
         "main": "10MP",
-        "under-display": "4MP"
+        "under_display": "4MP"
       }
     },
     "battery": {
@@ -563,7 +563,7 @@
         "ultrawide": "12MP",
         "telephoto": "10MP"
       },
-      "front": "10MP (under-display)"
+      "front": "10MP (under_display)"
     },
     "battery": {
       "capacity": 3700,
@@ -627,7 +627,7 @@
         "main": "12MP",
         "ultrawide": "12MP"
       },
-      "front": "10MP (under-display)"
+      "front": "10MP (under_display)"
     },
     "battery": {
       "capacity": 3700,
@@ -695,7 +695,7 @@
       "capacity": 5000,
       "fast_charging": "30W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 17",
     "additional_features": {
@@ -760,7 +760,7 @@
       "capacity": 4800,
       "fast_charging": "30W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 17",
     "additional_features": {
@@ -825,7 +825,7 @@
       "capacity": 4100,
       "fast_charging": "30W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 17",
     "additional_features": {
@@ -889,7 +889,7 @@
       "capacity": 3349,
       "fast_charging": "20W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 17",
     "additional_features": {
@@ -956,7 +956,7 @@
       "capacity": 4323,
       "fast_charging": "27W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 16 (upgradable to iOS 17)",
     "additional_features": {
@@ -1021,7 +1021,7 @@
       "capacity": 3693,
       "fast_charging": "27W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 16 (upgradable to iOS 17)",
     "additional_features": {
@@ -1086,7 +1086,7 @@
       "capacity": "4026mAh",
       "fast_charging": "20W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 16 (upgradable to iOS 17)",
     "additional_features": {
@@ -1150,7 +1150,7 @@
       "capacity": 3227,
       "fast_charging": "20W",
       "wireless_charging": "15W",
-      "magsafe_charging": true
+      "magsafe_charging": "Yes"
     },
     "operating_system": "iOS 16 (upgradable to iOS 17)",
     "additional_features": {
